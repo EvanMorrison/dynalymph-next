@@ -60,10 +60,10 @@ const NavItems = ({menuItems, ...props}) => {
       onMouseEnter={(m.children ? props.openPopoverMenu : props.closePopoverMenu)}
       onClick={props.handleClick}>
       <Link href={m.path}>
-        <span>
+        <a>
           <i className={`icon-${m.icon}`}>{m.icon}</i>
           {m.label}
-        </span>
+        </a>
       </Link>
       {
         (m.children
@@ -91,10 +91,10 @@ const Submenu = ({menuItem, ...props}) => {
           <MenuItem onClick={props.closePopoverMenu}
             {...menuItem}>
             <Link href={menuItem.path}>
-              <span css={css`* {color: #000000;}`}>
+              <a css={css`* {color: #000000;}`}>
                 <i className={`icon-${menuItem.icon}`}>{menuItem.icon}</i>
                 <span>{menuItem.label}</span>
-              </span>
+              </a>
             </Link>
           </MenuItem>
           {menuItem['children'].map((m, i) => {
@@ -103,10 +103,10 @@ const Submenu = ({menuItem, ...props}) => {
                 key={m.label}
                 onClick={props.closePopoverMenu}>
                 <Link href={m.path}>
-                  <span>
+                  <a>
                     <i className={`icon-${m.icon} submenu`} css={css`display: inline-block; position: relative; left: -8px; font-size: 20px;`} >{m.icon}</i>
                     <span css={{color: '#000000'}}>{m.label}</span>
-                  </span>
+                  </a>
                 </Link>
               </MenuItem>
             );

@@ -3,7 +3,7 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import Link from "next/link"
 import { PropTypes } from 'prop-types';
-import { SectionTitle, SectionBody, Paragraph } from '../../components/AppStyles';
+import { Section, SectionTitle, SectionBody, Paragraph } from '../../components/AppStyles';
 import { StyledList } from "./index";
 import appState from '../../components/appState'
 
@@ -12,7 +12,7 @@ class Lymphedema extends React.Component {
     const props = appState.homePage.heroPanels;
     const info = props[0];
     return (
-      <div>
+      <Section topcolor="logoGreen">
        <nav>
           <StyledList>
             <li><Link href={`/services/${props[0].routeName}`}><a>{props[0].title} | </a></Link></li>
@@ -26,7 +26,7 @@ class Lymphedema extends React.Component {
             <ReactMarkdown source={content} escapeHtml={false}/>
           </Paragraph>
         </SectionBody>
-      </div>
+      </Section>
     );
   }
 };

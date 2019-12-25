@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import styled from '@emotion/styled';
 import { Button } from '@rmwc/button';
+import '@material/button/dist/mdc.button.css';
 import { TextField } from '@rmwc/textfield';
+import '@material/textfield/dist/mdc.textfield.css';
 import { PropTypes } from 'prop-types';
 import { rgba } from 'polished';
 

@@ -3,7 +3,7 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import Link from 'next/link'
 import { PropTypes } from 'prop-types';
-import { SectionTitle, SectionBody, Paragraph } from '../../components/AppStyles'
+import { Section, SectionTitle, SectionBody, Paragraph } from '../../components/AppStyles'
 import { StyledList } from './index'
 import appState from '../../components/appState'
 
@@ -11,7 +11,7 @@ const ServiceThree = () => {
   const props = appState.homePage.heroPanels;
   const info = props[2];
   return (
-    <React.Fragment>
+    <Section topcolor="logoGreen">
       <nav>
         <StyledList>
           <li><Link href={`/services/${props[0].routeName}`}><a>{props[0].title} | </a></Link></li>
@@ -25,7 +25,7 @@ const ServiceThree = () => {
           <ReactMarkdown source={content} escapeHtml={false}/>
         </Paragraph>
       </SectionBody>
-    </React.Fragment>
+    </Section>
   );
 };
 
