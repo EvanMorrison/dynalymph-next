@@ -61,13 +61,16 @@ const subheadBlock = css`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 900px) {
+    height: 70px;
+  }
 `;
 
 class HomeComponent extends React.Component {
   state = {
     enteringOne: false,
     enteringTwo: false,
-    enteringThree: false
   }
 
   componentDidMount = () => {
@@ -77,15 +80,11 @@ class HomeComponent extends React.Component {
     setTimeout(() => {
       this.setState({enteringTwo: true});
     }, 750);
-    setTimeout(() => {
-      this.setState({enteringThree: true});
-    }, 1200);
   }
 
   render() {
     let one = this.state.enteringOne ? '25%' : '-800px';
-    let left = this.state.enteringTwo ? 0 : '-800px';
-    let right = this.state.enteringThree ? 0 : '-800px';
+    let two = this.state.enteringTwo ? '25%' : '-800px';
     const h2Style = css`
       text-align: center;
       font-weight: 300;
@@ -112,13 +111,21 @@ class HomeComponent extends React.Component {
           </div>
           <div css={[subheadBlock, css`
             top: 35vh;
-            left: ${left};
+            left: ${two};
+
+            @media screen and (max-width: 900px) {
+              left: ${two === '25%' ? 0 : '-800px'};
+            }
           `]}>
             <h2 css={h2Style}>Lymphatic fluid carries immune<br/> cells into, and by-products out of, your cells</h2>
           </div>
           <div css={[subheadBlock, css`
             top: 55vh;
-            right: ${right};
+            right: ${two};
+
+            @media screen and (max-width: 900px) {
+              right: ${two === '25%' ? 0 : '-800px'};
+            }
           `]}>
             <h2 css={h2Style}>Manual Lymphatic Drainage is a hands-on therapy<br/> for stimulation and support of these vital processes</h2>
           </div>
