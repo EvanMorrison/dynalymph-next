@@ -19,23 +19,19 @@ const HomeSection = styled.div`
     height: 100%;
     width: 100%;
 
-    /* opacity: 0.3; */
     z-index: -1;
     background-image: url(/assets/rocky-stream-1280x853.jpeg);
     background-repeat: no-repeat;
     background-position: center center;
 
-    /* background-attachment: fixed; */
     background-size: cover;
     border-radius: 100% 0 0 0/ 100px 0 0 0;
     border-top: 12px solid ${props => props.theme.logoGreen};
-
-    /* border-bottom: 12px solid ${props => props.theme.logoBlue}; */
   }
 
   @media screen and (max-width: 1023px) {
-    /* flex-direction: column; */
-    /* align-items: center; */
+    flex-direction: column;
+    align-items: center;
     width: 100vw;
   }
 `;
@@ -49,9 +45,9 @@ const Mask = styled.div`
   border-top: 12px solid ${props => props.theme.logoGreen};
   border-radius: 100% 0 0 0/ 100px 0 0 0;
 
-  /* @media screen and (max-width: 900px) {
+  @media screen and (max-width: 900px) {
     bottom: -165px;
-  } */
+  }
 `;
 
 const subheadBlock = css`
