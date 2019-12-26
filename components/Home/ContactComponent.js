@@ -70,7 +70,7 @@ const Name = styled.div`
 
 const ContactComponent = () => (
   <ContactSection>
-    <Portrait src={appdata.trishPortrait} alt=""/>
+    <Portrait src={appdata.trishPortrait} alt="Trish Romano, CLT"/>
     <Column>
       <Headline>
         Founder & Principal Care Provider

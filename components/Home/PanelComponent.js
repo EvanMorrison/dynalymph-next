@@ -78,7 +78,7 @@ const PanelComponent = ({props, color, onClick}) => (
     <PanelHeading color={color}>
       <em>{props.title}</em>
     </PanelHeading>
-    <PanelImg src={props.image} alt=""/>
+    <PanelImg src={props.image} alt={`props.title image`}/>
     <PanelContent>
       <PanelText>{props.text} </PanelText>
     </PanelContent>
