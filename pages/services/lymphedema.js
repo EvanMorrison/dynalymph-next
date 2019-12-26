@@ -1,4 +1,4 @@
-import LymphedemaMDX from '../../public/content/lymphedema.mdx'
+import LymphedemaMDX from '../../content/lymphedema.mdx'
 import React from 'react';
 import Link from "next/link"
 import { PropTypes } from 'prop-types';

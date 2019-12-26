@@ -1,4 +1,4 @@
-import ServicesMDX from '../../public/content/services.mdx'
+import ServicesMDX from '../../content/services.mdx'
 import React from 'react';
 import Link from "next/link"
 import styled from '@emotion/styled';

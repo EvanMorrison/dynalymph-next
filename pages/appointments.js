@@ -1,4 +1,4 @@
-import AppointmentsMDX from '../public/content/appointments.mdx';
+import AppointmentsMDX from '../content/appointments.mdx';
 import EmailForm from '../components/EmailForm';
 import React from 'react';
 import { Section, SectionTitle, SectionBody, Paragraph } from '../components/AppStyles';

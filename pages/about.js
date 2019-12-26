@@ -1,5 +1,5 @@
 import appdata from '../components/appState';
-import AboutMDX from '../public/content/about.mdx';
+import AboutMDX from '../content/about.mdx';
 import React from 'react';
 import { css } from '@emotion/core';
 import { Section, SectionTitle, SectionBody, Paragraph } from '../components/AppStyles';

@@ -1,4 +1,4 @@
-import SurgeriesMDX from '../../public/content/surgeries.mdx'
+import SurgeriesMDX from '../../content/surgeries.mdx'
 import React from 'react';
 import Link from 'next/link'
 import { PropTypes } from 'prop-types';

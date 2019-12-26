@@ -1,4 +1,4 @@
-import WellnessMDX from '../../public/content/wellness.mdx'
+import WellnessMDX from '../../content/wellness.mdx'
 import React from 'react';
 import Link from 'next/link'
 import { PropTypes } from 'prop-types';
