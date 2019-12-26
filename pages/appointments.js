@@ -2,6 +2,7 @@ import AppointmentsMDX from '../public/content/appointments.mdx';
 import EmailForm from '../components/EmailForm';
 import React from 'react';
 import { Section, SectionTitle, SectionBody, Paragraph } from '../components/AppStyles';
+import Head from 'next/head';
 
 class AppointmentComponent extends React.Component {
   state = {
@@ -54,6 +55,10 @@ class AppointmentComponent extends React.Component {
   render() {
     return (
       <Section topcolor="logoGreen">
+        <Head>
+          <link rel="stylesheet" href="https://unpkg.com/@material/button@4.0.0/dist/mdc.button.min.css"/>
+          <link rel="stylesheet" href="https://unpkg.com/@material/textfield@4.0.0/dist/mdc.textfield.min.css"/>
+        </Head>
         <SectionTitle>Appointments</SectionTitle>
         <SectionBody>
           <Paragraph>

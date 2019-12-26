@@ -1,10 +1,8 @@
 var withMDX = require('@next/mdx')({
   extention: /\.mdx?$/
 })
-var withCSS = require('@zeit/next-css')
 
-module.exports = withMDX(
-  withCSS({
+module.exports = withMDX({
     webpack: (config, options) => {
       config.module.rules.push({
         test: /\.(ico|svg|png|gif|jpe?g)$/,
@@ -31,5 +29,4 @@ module.exports = withMDX(
       return config
     }
   })
-)
   
