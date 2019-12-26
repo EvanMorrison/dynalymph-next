@@ -16,7 +16,7 @@ const HomeSection = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    height: calc(100vh - 50px);
+    height: 100%;
     width: 100%;
 
     z-index: -1;
@@ -45,9 +45,9 @@ const Mask = styled.div`
   border-top: 12px solid ${props => props.theme.logoGreen};
   border-radius: 100% 0 0 0/ 100px 0 0 0;
 
-  /* @media screen and (max-width: 900px) {
+  @media screen and (max-width: 900px) {
     bottom: -170px;
-  } */
+  }
 `;
 
 const subheadBlock = css`
