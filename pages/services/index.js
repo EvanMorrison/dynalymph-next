@@ -1,9 +1,8 @@
-import content from '../../public/content/services.md'
+import ServicesMDX from '../../public/content/services.mdx'
 import React from 'react';
 import Link from "next/link"
 import styled from '@emotion/styled';
 import { Section, SectionTitle, SectionBody, Paragraph } from '../../components/AppStyles'
-import ReactMarkdown from 'react-markdown'
 import appState from '../../components/appState'
 
 export const StyledList = styled.ul`
@@ -41,7 +40,7 @@ class ServicesContainer extends React.Component {
         <SectionTitle>Services</SectionTitle>
         <SectionBody>
           <Paragraph>
-            <ReactMarkdown source={content} escapeHtml={false}/>
+            <ServicesMDX/>
           </Paragraph>
         </SectionBody>
       </React.Fragment>

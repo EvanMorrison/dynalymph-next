@@ -59,7 +59,7 @@ const NavItems = ({menuItems, ...props}) => {
     <li key={m.label}
       onMouseEnter={(m.children ? props.openPopoverMenu : props.closePopoverMenu)}
       onClick={props.handleClick}>
-      <Link href={m.path}>
+      <Link href={m.path} prefetch={false}>
         <a>
           <i className={`icon-${m.icon}`}>{m.icon}</i>
           {m.label}

@@ -1,6 +1,5 @@
-import content from '../../public/content/wellness.md'
+import WellnessMDX from '../../public/content/wellness.mdx'
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
 import Link from 'next/link'
 import { PropTypes } from 'prop-types';
 import { Section, SectionTitle, SectionBody, Paragraph } from '../../components/AppStyles';
@@ -23,7 +22,7 @@ class ServiceTwo extends React.Component {
         <SectionTitle image={info.image}>{info.title}</SectionTitle>
         <SectionBody>
           <Paragraph>
-            <ReactMarkdown source={content} escapeHtml={false}/>
+            <WellnessMDX/>
           </Paragraph>
         </SectionBody>
       </Section>

@@ -1,6 +1,5 @@
-import content from '../../public/content/surgeries.md'
+import SurgeriesMDX from '../../public/content/surgeries.mdx'
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
 import Link from 'next/link'
 import { PropTypes } from 'prop-types';
 import { Section, SectionTitle, SectionBody, Paragraph } from '../../components/AppStyles'
@@ -22,7 +21,7 @@ const ServiceThree = () => {
       <SectionTitle image={info.image}>{info.title}</SectionTitle>
       <SectionBody>
         <Paragraph>
-          <ReactMarkdown source={content} escapeHtml={false}/>
+          <SurgeriesMDX/>
         </Paragraph>
       </SectionBody>
     </Section>

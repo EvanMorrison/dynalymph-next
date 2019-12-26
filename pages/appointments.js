@@ -1,7 +1,6 @@
-import content from '../public/content/appointments.md';
+import AppointmentsMDX from '../public/content/appointments.mdx';
 import EmailForm from '../components/EmailForm';
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
 import { Section, SectionTitle, SectionBody, Paragraph } from '../components/AppStyles';
 
 class AppointmentComponent extends React.Component {
@@ -58,7 +57,7 @@ class AppointmentComponent extends React.Component {
         <SectionTitle>Appointments</SectionTitle>
         <SectionBody>
           <Paragraph>
-            <ReactMarkdown source={content} escapeHtml={false}/>
+            <AppointmentsMDX/>
           </Paragraph>
           {
             this.state.emailStatus === 'success'
@@ -71,13 +70,12 @@ class AppointmentComponent extends React.Component {
               )
               : (
                 <React.Fragment>
-                  {this.state.emailStatus === 'failed'
-                    ? (
+                  {this.state.emailStatus === 'failed' &&
+                    (
                       <Paragraph>
                         Uh oh, there was a problem sending the message. Please check your network connetion and try again.
                       </Paragraph>
                     )
-                    : null
                   }
                   <EmailForm message={this.state.message} handleInput={this.handleFormInput} onSubmit={this.sendMail} sending={this.state.sending}/>
                 </React.Fragment>

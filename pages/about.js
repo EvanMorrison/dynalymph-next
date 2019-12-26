@@ -1,7 +1,6 @@
 import appdata from '../components/appState';
-import content from '../public/content/about.md';
+import AboutMDX from '../public/content/about.mdx';
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
 import { css } from '@emotion/core';
 import { Section, SectionTitle, SectionBody, Paragraph } from '../components/AppStyles';
 
@@ -18,7 +17,7 @@ const AboutComponent = (props) => {
           @media (max-width: 426px) { width: 120px; }
         `}/>
         <Paragraph>
-          <ReactMarkdown source={content} escapeHtml={false}/>
+          <AboutMDX/>
         </Paragraph>
       </SectionBody>
     </Section>
