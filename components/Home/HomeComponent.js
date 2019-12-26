@@ -34,8 +34,8 @@ const HomeSection = styled.div`
   }
 
   @media screen and (max-width: 1023px) {
-    flex-direction: column;
-    align-items: center;
+    /* flex-direction: column; */
+    /* align-items: center; */
     width: 100vw;
   }
 `;
@@ -48,6 +48,10 @@ const Mask = styled.div`
   width: 100%;
   border-top: 12px solid ${props => props.theme.logoGreen};
   border-radius: 100% 0 0 0/ 100px 0 0 0;
+
+  /* @media screen and (max-width: 900px) {
+    bottom: -165px;
+  } */
 `;
 
 const subheadBlock = css`
@@ -61,10 +65,6 @@ const subheadBlock = css`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  @media screen and (max-width: 900px) {
-    height: 70px;
-  }
 `;
 
 class HomeComponent extends React.Component {
