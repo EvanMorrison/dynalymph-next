@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import ServicesMDX from '../../content/services.mdx'
 import React from 'react';
 import Link from "next/link"
@@ -29,6 +30,9 @@ class ServicesContainer extends React.Component {
     const props = appState.homePage.heroPanels;
     return (
       <Section topcolor="logoGreen">
+        <Head>
+          <title>Services || Dynamic Lymphatics</title>
+        </Head>
         <nav>
           <StyledList>
             <li><Link href={`/services/${props[0].routeName}`}><a>{props[0].title} | </a></Link></li>

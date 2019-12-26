@@ -1,5 +1,6 @@
 import appdata from '../components/appState';
 import AboutMDX from '../content/about.mdx';
+import Head from 'next/head'
 import React from 'react';
 import { css } from '@emotion/core';
 import { Section, SectionTitle, SectionBody, Paragraph } from '../components/AppStyles';
@@ -7,6 +8,9 @@ import { Section, SectionTitle, SectionBody, Paragraph } from '../components/App
 const AboutComponent = (props) => {
   return (
     <Section topcolor="logoGreen">
+      <Head>
+        <title>About || Dynamic Lymphatics</title>
+      </Head>
       <SectionTitle>About</SectionTitle>
       <SectionBody>
         <img src={appdata.trishPortrait} alt="Trish Romano" css={css`

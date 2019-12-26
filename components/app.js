@@ -33,6 +33,7 @@ class App extends Component {
       <ThemeProvider theme={theme}>
         <div>
         <Head>
+          <title>Dynamic Lymphatics</title>
           <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112343025-1"></script>
           <script dangerouslySetInnerHTML={{__html:
               `window.dataLayer = window.dataLayer || [];
@@ -43,11 +44,8 @@ class App extends Component {
           <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
           <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
           <meta name="theme-color" content="#000000"/>
-          <meta name="description" content="Dynamic Lymphatics provides lymphatic drainage therapy."/>
-          <meta name="description" content="lymphatic massage"/>
-          <meta name="description" content="Trish Romano, CLT has over 17 years experience helping clients of all types, from hard training athletes, to office warriors, to those facing serious illness."/>
-          <meta name="description" content="Lymphatic Massage Lymphatic Drainage Therapy"/>
-          <meta name="description" content="Best lymphatic drainage therapy in Scottsdale Arizona"/>
+          <meta name="description" content="Dynamic Lymphatics provides lymphatic drainage therapy from a Casely-Smith certified practitioner." key="long description"/>
+          <meta name="description" content="lymphatic massage" key="common search description"/>
         </Head>
           <Global styles={styles}/>
           <HeadingComponent position={this.state.scrollPosition} />

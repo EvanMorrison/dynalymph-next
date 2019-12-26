@@ -5,7 +5,7 @@ import Home from '../components/Home'
 const HomePage = () => (
   <div>
     <Head>
-      <title>Home</title>
+      <title>Dynamic Lymphatics || Home</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <Home/>
