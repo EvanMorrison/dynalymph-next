@@ -5,6 +5,7 @@ import Popover from './components/popover';
 import React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
+import { useRouter } from 'next/router';
 import { PropTypes } from 'prop-types';
 import Link from "next/link"
 import { rgba } from 'polished';
@@ -27,9 +28,10 @@ const NavList = styled.ul`
       padding: 8px 20px;
       border-radius: 3px;
 
-      &:hover, &.active {
+      &:hover {
         background: ${props => rgba(props.theme.primaryLt, 0.3)};
         transition: all 0.2s linear;
+        cursor: pointer;
       }
     }
 
@@ -55,30 +57,34 @@ const NavList = styled.ul`
 `;
 
 const NavItems = ({menuItems, ...props}) => {
-  return (menuItems.map(m => (
-    <li key={m.label}
-      onMouseEnter={(m.children ? props.openPopoverMenu : props.closePopoverMenu)}
-      onClick={props.handleClick}>
-      <Link href={m.path} prefetch={false}>
-        <a>
-          <i className={`icon-${m.icon}`}>{m.icon}</i>
-          {m.label}
-        </a>
-      </Link>
-      {
-        (m.children
-          ? props.isMobile
-            ? (
-              <ul style={{marginLeft: '24px'}}>
-                <NavItems {...props} menuItems={m.children} />
-              </ul>
-            )
-            : <Submenu {...props} menuItem={m}/>
-          : null
-        )
-      }
-    </li>
-  )));
+  const router = useRouter();
+  return (menuItems.map(m => {
+    const activeLink = router.pathname === m.path || (!props.isMobile && router.pathname.split("/")[1] === m.path.split("/").pop());
+    return(
+      <li key={m.label}
+        onMouseEnter={(m.children ? props.openPopoverMenu : props.closePopoverMenu)}
+        onClick={props.handleClick}>
+        <Link href={m.path} prefetch={false}>
+          <a css={theme => ([activeLink && {background: rgba(theme.primaryLt, 0.5)}])}>
+            <i className={`icon-${m.icon}`}>{m.icon}</i>
+            {m.label}
+          </a>
+        </Link>
+        {
+          (m.children
+            ? props.isMobile
+              ? (
+                <ul style={{marginLeft: '24px'}}>
+                  <NavItems {...props} menuItems={m.children} />
+                </ul>
+              )
+              : <Submenu {...props} menuItem={m}/>
+            : null
+          )
+        }
+      </li>
+    );
+  }));
 };
 
 const Submenu = ({menuItem, ...props}) => {

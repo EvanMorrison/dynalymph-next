@@ -8,7 +8,6 @@ import { Row, Column } from '../AppStyles';
 const FooterWrapper = styled(Row)`
   height: 120px;
   width: 100%;
-  padding: 0 80px;
   background: ${props => rgba(props.theme.primary, 0.8)};
   align-content: center;
   justify-content: space-between;
@@ -35,8 +34,6 @@ const Footer = () => (
           <span>&copy;{moment().format('YYYY')}</span>
           <span>Dynamic Lymphatics, LLC</span>
         </Row>
-      </Column>
-      <Column>
       </Column>
     </div>
   </FooterWrapper>

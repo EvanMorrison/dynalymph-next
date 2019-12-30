@@ -43,8 +43,7 @@ class App extends Component {
           <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
           <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
           <meta name="theme-color" content="#000000"/>
-          <meta name="description" content="lymphatic massage" key="common search description"/>
-          <meta name="description" content="Dynamic Lymphatics provides lymphatic drainage therapy from a Casely-Smith certified practitioner." key="long description"/>
+          <meta name="description" content="Dynamic Lymphatics provides lymphatic drainage therapy (lymphatic massage) from Trish Romano, CLT, a Casely-Smith certified practitioner." key="long description"/>
         </Head>
           <Global styles={styles}/>
           <HeadingComponent position={this.state.scrollPosition} />

@@ -1,0 +1,2 @@
+# Optional: Redirect default Netlify subdomain to primary domain
+https://dynamiclymphatics-next-js.netlify.com/* https://www.dynamiclymphatics.com/:splat 301!

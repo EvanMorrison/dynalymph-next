@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "export": "next build && next export",
+    "export": "next build && next export && cp _redirects out/_redirects",
     "build": "next build",
     "start": "next start"
   },
@@ -16,16 +16,13 @@
     "@material/textfield": "^4.0.0",
     "@rmwc/button": "^5.7.2",
     "@rmwc/textfield": "^5.7.2",
-    "@zeit/next-css": "^1.0.1",
     "emotion-theming": "^10.0.27",
     "moment": "^2.24.0",
     "next": "9.1.6",
     "polished": "^3.4.2",
     "prop-types": "^15.7.2",
     "react": "16.12.0",
-    "react-dom": "16.12.0",
-    "react-markdown": "^4.2.2",
-    "react-router-dom": "^5.1.2"
+    "react-dom": "16.12.0"
   },
   "devDependencies": {
     "@mdx-js/loader": "^1.5.3",
