@@ -75,7 +75,7 @@ class HomeComponent extends React.Component {
     });
     setTimeout(() => {
       this.setState({enteringTwo: true});
-    }, 750);
+    }, 500);
   }
 
   render() {
