@@ -2,11 +2,11 @@ import appState from '../appState';
 import PanelComponent from './PanelComponent';
 import React from 'react';
 import styled from '@emotion/styled';
+import Router from 'next/router';
 import { rgba } from 'polished';
-import Router from 'next/router'
 import {theme} from '../AppStyles'
 
-const HeroSection = styled.div`
+const ServicesPanels = styled.div`
   position: relative;
   top: -85px;
   display: flex;
@@ -36,7 +36,7 @@ const HeroSection = styled.div`
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
-    border-radius: 100% 0 100% 0/ 100px 0 200px 0;
+    border-radius: 0 0 100% 0/ 100px 0 200px 0;
     border-top: 12px solid ${props => props.theme.logoGreen};
     border-bottom: 12px solid ${props => props.theme.logoGreen};
   }
@@ -48,7 +48,7 @@ const HeroSection = styled.div`
   }
 `;
 
-class HeroComponent extends React.Component {
+class PanelsSection extends React.Component {
   state = {
     panels: appState.homePage.heroPanels,
     routes: [appState.homePage.heroPanels[0].routeName, appState.homePage.heroPanels[1].routeName, appState.homePage.heroPanels[2].routeName]
@@ -62,13 +62,13 @@ class HeroComponent extends React.Component {
     const panels = this.state.panels;
     const colors = [theme.logoGreen, theme.logoGreen, theme.logoGreen];
     return (
-      <HeroSection>
+      <ServicesPanels>
         {panels.map((p, i) => {
           return (<PanelComponent key={i} props={p} color={colors[i]} onClick={(e) => this.panelClick(e, i)}/>);
         })}
-      </HeroSection>
+      </ServicesPanels>
     );
   }
 };
 
-export default HeroComponent;
+export default PanelsSection;

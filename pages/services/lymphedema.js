@@ -1,6 +1,6 @@
 import LymphedemaMDX from '../../content/lymphedema.mdx'
 import React from 'react';
-import Subnav from './subnav';
+import Subnav from '../../components/Services/subnav';
 import { PropTypes } from 'prop-types';
 import { Section, SectionTitle, SectionBody, Paragraph } from '../../components/AppStyles';
 import appState from '../../components/appState'

@@ -7,7 +7,7 @@ class HomeContainer extends React.Component {
     return (
       <div>
         <HomeComponent/>
-        <ContactComponent />
+        <ContactComponent/>
       </div>
     );
   }

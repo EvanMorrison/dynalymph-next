@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import styled from '@emotion/styled'
-import appState from '../../components/appState'
+import appState from '../appState'
 
 const Subnav = props => {
   const StyledList = styled.ul`

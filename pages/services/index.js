@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import ServicesMDX from '../../content/services.mdx'
 import React from 'react';
-import Subnav from './subnav';
+import PanelsSection from '../../components/Services/PanelsSection'
+import Subnav from '../../components/Services/subnav';
 import { Section, SectionTitle, SectionBody, Paragraph } from '../../components/AppStyles'
 
 class ServicesContainer extends React.Component {
@@ -12,14 +13,13 @@ class ServicesContainer extends React.Component {
           <title>Services || Dynamic Lymphatics</title>
         </Head>
         <Subnav/>
-        <React.Fragment>
         <SectionTitle>Services</SectionTitle>
         <SectionBody>
           <Paragraph>
             <ServicesMDX/>
           </Paragraph>
         </SectionBody>
-      </React.Fragment>
+        <PanelsSection/>
       </Section>
     );
   }

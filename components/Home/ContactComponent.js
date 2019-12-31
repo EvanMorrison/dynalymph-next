@@ -7,7 +7,7 @@ import { Row, Column } from '../AppStyles';
 
 const ContactSection = styled(Row)`
   flex-flow: wrap;
-
+  
   @media (max-width: 786px) {
     flex-direction: column;
     justify-content: flex-end;
@@ -24,7 +24,7 @@ const ContactSection = styled(Row)`
   min-height: 500px;
   width: 95%;
   max-width: 1280px;
-  margin: 0 auto;
+  margin: 100px auto;
   align-items: center;
   justify-content: flex-start;
 
