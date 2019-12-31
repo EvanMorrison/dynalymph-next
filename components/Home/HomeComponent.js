@@ -113,7 +113,7 @@ class HomeComponent extends React.Component {
               left: ${two === '25%' ? 0 : '-800px'};
             }
           `]}>
-            <h2 css={h2Style}>Lymphatic fluid carries immune<br/> cells into, and by-products out of, your cells</h2>
+            <h2 css={h2Style}>The flow of lymphatic fluid is essential to<br/> detoxification and a strong immune system</h2>
           </div>
           <div css={[subheadBlock, css`
             top: 55vh;
