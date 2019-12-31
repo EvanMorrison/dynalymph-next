@@ -58,29 +58,35 @@ const subheadBlock = css`
   background-color: rgba(0, 0, 0, 0.6);
   transition: all 1.3s ease-in-out;
   border-radius: 30% 5px 30% 5px / 100px 0;
+  transform: translate(-400px, -200px) scale(0.5);
+  opacity: 0;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
+const subheadBlockTwo = css`
+  ${subheadBlock};
+  transform: translate(400px, -200px) scale(0.5);
+`;
+
 class HomeComponent extends React.Component {
   state = {
-    enteringOne: false,
-    enteringTwo: false,
+    entering: false,
   }
 
   componentDidMount = () => {
     setTimeout(() => {
-      this.setState({enteringOne: true});
+      this.setState({entering: true});
     });
-    setTimeout(() => {
-      this.setState({enteringTwo: true});
-    }, 500);
   }
 
   render() {
-    let one = this.state.enteringOne ? '25%' : '-800px';
-    let two = this.state.enteringTwo ? '25%' : '-800px';
+    const {entering} = this.state;
+    const enteredStyle = css`
+      transform: translate(0, 0) scale(1);
+      opacity: 1;
+    `;
     const h2Style = css`
       text-align: center;
       font-weight: 300;
@@ -95,33 +101,20 @@ class HomeComponent extends React.Component {
       <React.Fragment>
         <Mask/>
         <HomeSection>
-          <div css={[subheadBlock, css`
+          <div css={[subheadBlock, entering && enteredStyle, css`
             top: 15vh;
-            right: ${one};
-
-            @media screen and (max-width: 900px) {
-              right: ${one === '25%' ? 0 : '-800px'};
-            }
           `]}>
             <h2 css={h2Style}>The Lymphatic system maintains<br/> the dynamic balance of fluid in your body</h2>
           </div>
-          <div css={[subheadBlock, css`
+          <div css={[subheadBlockTwo, entering && enteredStyle, css`
             top: 35vh;
-            left: ${two};
-
-            @media screen and (max-width: 900px) {
-              left: ${two === '25%' ? 0 : '-800px'};
-            }
+            ${'' /* left: ${two}; */}
           `]}>
             <h2 css={h2Style}>The flow of lymphatic fluid is essential to<br/> detoxification and a strong immune system</h2>
           </div>
-          <div css={[subheadBlock, css`
+          <div css={[subheadBlock, entering && enteredStyle, css`
             top: 55vh;
-            right: ${two};
-
-            @media screen and (max-width: 900px) {
-              right: ${two === '25%' ? 0 : '-800px'};
-            }
+            ${'' /* right: ${two}; */}
           `]}>
             <h2 css={h2Style}>Manual Lymphatic Drainage is a hands-on therapy<br/> for stimulation and support of these vital processes</h2>
           </div>
