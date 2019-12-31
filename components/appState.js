@@ -5,36 +5,31 @@ export default {
       title: 'Lymphedema',
       routeName: 'lymphedema',
       image: '/assets/images/sundress-336590_640.jpg',
-      subtitle: 'Lymphedema',
-      text: 'Our Manual Lymphatic Drainage is a gold-standard support for lymphedema (chronic interstitial swelling) management...[click to learn more]'
+      text: 'Our Manual Lymphatic Drainage is a gold-standard support for lymphedema...[click to learn more]'
     },
     {
       title: 'Wellness',
       routeName: 'wellness',
       image: '/assets/images/man-2609375_640.jpg',
-      subtitle: 'Wellness & Detoxification',
-      text: 'We understand our patients who are dealing with the challenges of ridding themselves of harmful toxins...[click to learn more]'
+      text: 'Lymphatic massage helps support ongoing wellness & vitality...[click to learn more]'
     },
     {
       title: 'Pre & Post Surgical',
       routeName: 'surgeries',
-      image: '/assets/images/woman-3371263_640.jpg',
-      subtitle: 'Breast Explant/Lyposuction Other Surgeries',
-      text: 'Manual Lymphatic Drainage supports complete recovery from surgeries of any type...[click to learn more]'
+      image: '/assets/images/couple-1845334_640.jpg',
+      text: 'Manual Lymphatic Drainage supports complete recovery from surgeries of all types...[click to learn more]'
     },
     {
       title: 'Detoxification',
       routeName: 'detoxification',
-      image: '',
-      subtitle: 'Detoxification',
-      text: '[click to learn more]'
+      image: '/assets/images/jeffrey-workman-YvkH8R1zoQM-unsplash-1000x1000.jpg',
+      text: 'We understand those facing the challenges of ridding themselves of harmful toxins...[click to learn more]'
     },
     {
       title: 'Breast Implant Illness',
       routeName: 'breastimplantillness',
-      image: '',
-      subtitle: 'Breast Implant Illness',
-      text: '[click to learn more]'
+      image: '/assets/images/woman-3371263_640.jpg',
+      text: 'Infection, swelling, & disease from breast implants present unique challenges...[click to learn more]'
     }
   ]
 };

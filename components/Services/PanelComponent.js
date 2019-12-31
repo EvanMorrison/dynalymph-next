@@ -5,6 +5,7 @@ import { rgba } from 'polished';
 import { Column } from '../AppStyles';
 
 const Panel = styled.div`
+  display: flex;
   margin: 20px;
   border-radius: 10px;
   overflow: hidden;
@@ -21,21 +22,21 @@ const Panel = styled.div`
   @media screen and (max-width: 1099px) {
     flex: 0 0 30%;
     width: 90%;
-    max-width: 400px;
+    /* max-width: 400px; */
     margin-bottom: 40px;
   }
 
   @media screen and (min-width: 1100px) {
     flex: 0 0 30%;
-    max-width: 400px;
-    height: 550px;
+    /* max-width: 400px; */
+    height: 80px;
   }
 `;
 
 const PanelHeading = styled.h2`
-  width: 100%;
-  height: 84px;
-  line-height: 84px;
+  width: 400px;
+  height: 80px;
+  line-height: 80px;
   font-family: ${props => props.theme.titleFont};
   font-size: 3em;
   text-align: center;
@@ -46,7 +47,9 @@ const PanelHeading = styled.h2`
 
 const PanelImg = styled.img`
   max-height: 250px;
-  min-width: 100%;
+  width: 80px;
+  height: 80px;
+  /* min-width: 100%; */
 
   @media screen and (max-width: 1099px) {
     max-height: 200px;
@@ -60,13 +63,12 @@ const PanelImg = styled.img`
 `;
 
 const PanelContent = styled(Column)`
-  padding: 20px 40px;
-  margin-bottom: 20px;
+  padding: 12px;
+  height: 80px;
 `;
 
 const PanelText = styled.p`
   font-family: ${props => props.theme.bodyFont};
-  ${''/* text-align: justify; */}
   font-size: 1.2em;
   font-weight: 300;
   opacity: 0.87;
@@ -75,10 +77,10 @@ const PanelText = styled.p`
 
 const PanelComponent = ({props, color, onClick}) => (
   <Panel onClick={onClick}>
+    <PanelImg src={props.image} alt={`${props.title} image`}/>
     <PanelHeading color={color}>
       <em>{props.title}</em>
     </PanelHeading>
-    <PanelImg src={props.image} alt={`props.title image`}/>
     <PanelContent>
       <PanelText>{props.text} </PanelText>
     </PanelContent>

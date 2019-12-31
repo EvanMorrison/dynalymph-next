@@ -8,15 +8,15 @@ import {theme} from '../AppStyles'
 
 const ServicesPanels = styled.div`
   position: relative;
-  top: -85px;
+  top: -100px;
   display: flex;
-  flex-direction: row;
-  padding: 80px 0 180px;
+  flex-direction: column;
+  padding: 30px 0 180px;
   background: transparent;
   justify-content: center;
   z-index: 1;
 
-  :after {
+  /* :after {
     content: '';
     position: absolute;
     top: 0;
@@ -39,7 +39,7 @@ const ServicesPanels = styled.div`
     border-radius: 0 0 100% 0/ 100px 0 200px 0;
     border-top: 12px solid ${props => props.theme.logoGreen};
     border-bottom: 12px solid ${props => props.theme.logoGreen};
-  }
+  } */
 
   @media screen and (max-width: 1023px) {
     flex-direction: column;

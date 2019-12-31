@@ -24,6 +24,7 @@ const Subnav = props => {
   return(
     <nav>
       <StyledList>
+        <li><Link href={`/services`}><a className="styled-link">Services > </a></Link></li>
         <li><Link href={`/services/${p1.routeName}`}><a className="styled-link">{p1.title} | </a></Link></li>
         <li><Link href={`/services/${p2.routeName}`}><a className="styled-link">{p2.title} | </a></Link></li>
         <li><Link href={`/services/${p3.routeName}`}><a className="styled-link">{p3.title} | </a></Link></li>
