@@ -72,6 +72,12 @@ const Name = styled.div`
 const mdxStyle = {
   fontSize: "1.15em",
   fontWeight: 300,
+  h1: {
+    color: "#083"
+  },
+  hr: {
+    borderColor: "#083"
+  },
   p: {
     lineHeight: "1.5em",
     maxWidth: "38em",
