@@ -7,15 +7,23 @@ export default theme => css`
   @import url('https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps|Montserrat:100,300,600');
   @import url('https://fonts.googleapis.com/css?family=Material+Icons');
 
+  :root {
+    font-family: Arimo, sans-serif;
+    font-size: 16px;
+  }
+
   * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
   }
 
-  body {
-    font-family: Arimo, sans-serif;
-    font-size: 15px;
+  p {
+    margin: 1em 0;
+  }
+
+  p ~ ul {
+    margin-left: 30px;
   }
 
   nav {
@@ -23,7 +31,7 @@ export default theme => css`
     color: inherit;
   }
 
-  div a:not([href^="mailto"]) {
+  div a.styled-link:not([href^="mailto"]) {
     text-decoration: none;
     color: inherit;
   }
@@ -35,8 +43,8 @@ export default theme => css`
   @font-face {
     font-family: 'Material Icons';
     font-style: normal;
-  font-weight: 400;
-  src: local('Material Icons'),
+    font-weight: 400;
+    src: local('Material Icons'),
     local('MaterialIcons-Regular'),
     url(https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/fonts/Material-Design-Iconic-Font.woff2) format('woff2'),
     url(https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/fonts/Material-Design-Iconic-Font.woff) format('woff'),

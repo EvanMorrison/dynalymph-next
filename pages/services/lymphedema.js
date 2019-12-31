@@ -1,24 +1,16 @@
 import LymphedemaMDX from '../../content/lymphedema.mdx'
 import React from 'react';
-import Link from "next/link"
+import Subnav from './subnav';
 import { PropTypes } from 'prop-types';
 import { Section, SectionTitle, SectionBody, Paragraph } from '../../components/AppStyles';
-import { StyledList } from "./index";
 import appState from '../../components/appState'
 
 class Lymphedema extends React.Component {
   render() {
-    const props = appState.homePage.heroPanels;
-    const info = props[0];
+    const info = appState.homePage.heroPanels[0];
     return (
       <Section topcolor="logoGreen">
-       <nav>
-          <StyledList>
-            <li><Link href={`/services/${props[0].routeName}`}><a>{props[0].title} | </a></Link></li>
-            <li><Link href={`/services/${props[1].routeName}`}><a>{props[1].title} | </a></Link></li>
-            <li><Link href={`/services/${props[2].routeName}`}><a>{props[2].title}</a></Link></li>
-          </StyledList>
-        </nav>
+       <Subnav/>
         <SectionTitle image={info.image}>{info.title}</SectionTitle>
         <SectionBody>
           <Paragraph>

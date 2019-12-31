@@ -3,7 +3,8 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 const HomeSection = styled.div`
-  height: calc(100vh - 50px);
+  /* height: calc(100vh - 50px); */
+  height: 100vh;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -20,7 +21,7 @@ const HomeSection = styled.div`
     width: 100%;
 
     z-index: -1;
-    background-image: url(/assets/rocky-stream-1280x853.jpeg);
+    background-image: url(/assets/rocky-stream-1280x853.jpeg), linear-gradient(${props => props.theme.primary}, ${props => props.theme.primary});
     background-repeat: no-repeat;
     background-position: center center;
 
@@ -44,10 +45,7 @@ const Mask = styled.div`
   width: 100%;
   border-top: 12px solid ${props => props.theme.logoGreen};
   border-radius: 100% 0 0 0/ 100px 0 0 0;
-
-  @media screen and (max-width: 900px) {
-    bottom: -170px;
-  }
+  bottom: -170px;
 `;
 
 const subheadBlock = css`
@@ -108,13 +106,11 @@ class HomeComponent extends React.Component {
           </div>
           <div css={[subheadBlockTwo, entering && enteredStyle, css`
             top: 35vh;
-            ${'' /* left: ${two}; */}
           `]}>
             <h2 css={h2Style}>The flow of lymphatic fluid is essential<br/>to body detoxification and immunity</h2>
           </div>
           <div css={[subheadBlock, entering && enteredStyle, css`
             top: 55vh;
-            ${'' /* right: ${two}; */}
           `]}>
             <h2 css={h2Style}>Manual Lymphatic Drainage is a hands-on therapy<br/> for stimulation and support of these vital processes</h2>
           </div>

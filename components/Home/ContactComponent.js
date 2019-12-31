@@ -1,9 +1,13 @@
-import appdata from '../appState'
 import React from 'react';
+import Welcome from './welcome.mdx';
+import appdata from '../appState'
+import Link from 'next/link'
 import styled from '@emotion/styled';
 import { Row, Column } from '../AppStyles';
 
 const ContactSection = styled(Row)`
+  flex-flow: wrap;
+
   @media (max-width: 786px) {
     flex-direction: column;
     justify-content: flex-end;
@@ -21,7 +25,6 @@ const ContactSection = styled(Row)`
   width: 95%;
   max-width: 1280px;
   margin: 0 auto;
-  font-family: ${props => props.theme.headingFont};
   align-items: center;
   justify-content: flex-start;
 
@@ -70,6 +73,9 @@ const Name = styled.div`
 
 const ContactComponent = () => (
   <ContactSection>
+    <div css={{marginBottom: 30, flex: "0 0 100%"}}>
+      <Welcome/>
+    </div>
     <Portrait src={appdata.trishPortrait} alt="Trish Romano, CLT"/>
     <Column>
       <Headline>
@@ -89,6 +95,7 @@ const ContactComponent = () => (
         </table>
       </Headline>
     </Column>
+      <div css={{margin: "30px 0 80px", flex: "0 0 100%"}}>Learn more about Trish on the <Link href="/about"><span css={{color: "#00E", cursor: "pointer"}}><a>About</a></span></Link> page</div>
   </ContactSection>
 );
 
