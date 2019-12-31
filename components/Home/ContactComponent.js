@@ -3,7 +3,7 @@ import Welcome from './welcome.mdx';
 import appdata from '../appState'
 import Link from 'next/link'
 import styled from '@emotion/styled';
-import { Row, Column } from '../AppStyles';
+import { Row, Column, Paragraph } from '../AppStyles';
 
 const ContactSection = styled(Row)`
   flex-flow: wrap;
@@ -69,9 +69,19 @@ const Name = styled.div`
   }
 `;
 
+const mdxStyle = {
+  padding: 18,
+  fontSize: "1.15em",
+  fontWeight: 300,
+  p: {
+    lineHeight: "1.5em",
+    maxWidth: "38em",
+  }
+};
+
 const ContactComponent = () => (
   <ContactSection>
-    <div css={{marginBottom: 30, flex: "0 0 100%"}}>
+    <div css={[{marginBottom: 30, flex: "0 0 100%"}, mdxStyle]}>
       <Welcome/>
     </div>
     <Portrait src={appdata.trishPortrait} alt="Trish Romano, CLT"/>

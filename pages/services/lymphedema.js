@@ -14,7 +14,9 @@ class Lymphedema extends React.Component {
         <SectionTitle image={info.image}>{info.title}</SectionTitle>
         <SectionBody>
           <Paragraph>
-            <LymphedemaMDX/>
+            <div css={theme => ({h1: {marginTop: 50, fontStyle: "italic", fontWeight: "bold", fontFamily: theme.titleFont}})}>
+              <LymphedemaMDX/>
+            </div>
           </Paragraph>
         </SectionBody>
       </Section>
