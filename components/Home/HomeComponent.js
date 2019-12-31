@@ -110,7 +110,7 @@ class HomeComponent extends React.Component {
             top: 35vh;
             ${'' /* left: ${two}; */}
           `]}>
-            <h2 css={h2Style}>The flow of lymphatic fluid is essential to<br/> detoxification and a strong immune system</h2>
+            <h2 css={h2Style}>The flow of lymphatic fluid is essential<br/>to body detoxification and immunity</h2>
           </div>
           <div css={[subheadBlock, entering && enteredStyle, css`
             top: 55vh;
