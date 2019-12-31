@@ -7,19 +7,6 @@ import { Row, Column } from '../AppStyles';
 
 const ContactSection = styled(Row)`
   flex-flow: wrap;
-  
-  @media (max-width: 786px) {
-    flex-direction: column;
-    justify-content: flex-end;
-    align-content: flex-end;
-    align-items: flex-start;
-    padding-top: 80px;
-  }
-
-  @media (min-width: 768px) and (max-width: 1439px) {
-    width: 80%;
-  }
-
   position: relative;
   min-height: 500px;
   width: 95%;
@@ -27,6 +14,17 @@ const ContactSection = styled(Row)`
   margin: 100px auto;
   align-items: center;
   justify-content: flex-start;
+  
+  @media (max-width: 786px) {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-end;
+    align-items: flex-start;
+  }
+
+  @media (min-width: 768px) and (max-width: 1439px) {
+    width: 80%;
+  }
 
   * {
     transition: all 0.3s ease-out;
