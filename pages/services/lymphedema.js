@@ -7,7 +7,7 @@ import appState from '../../components/appState'
 
 class Lymphedema extends React.Component {
   render() {
-    const info = appState.homePage.heroPanels[0];
+    const info = appState.servicesPanels[0];
     return (
       <Section topcolor="logoGreen">
        <Subnav/>

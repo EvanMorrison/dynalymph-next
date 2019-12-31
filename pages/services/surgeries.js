@@ -6,7 +6,7 @@ import { Section, SectionTitle, SectionBody, Paragraph } from '../../components/
 import appState from '../../components/appState'
 
 const ServiceThree = () => {
-  const info = appState.homePage.heroPanels[2];
+  const info = appState.servicesPanels[2];
   return (
     <Section topcolor="logoGreen">
       <Subnav/>

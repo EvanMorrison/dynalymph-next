@@ -9,7 +9,7 @@ const AboutComponent = (props) => {
   return (
     <Section topcolor="logoGreen">
       <Head>
-        <title>About || Dynamic Lymphatics</title>
+        <title>About | Dynamic Lymphatics</title>
       </Head>
       <SectionTitle>About</SectionTitle>
       <SectionBody>

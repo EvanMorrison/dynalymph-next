@@ -12,9 +12,7 @@ const Subnav = props => {
     display: inline-block;
     margin-right: 5px;
     font-size: 18px;
-    &:first-of-type { color: ${props => props.theme.logoGreen}; }
-    &:nth-of-type(2) { color: ${props => props.theme.logoGreen}; }
-    &:last-of-type { color: ${props => props.theme.logoGreen}; }
+    color: ${props => props.theme.logoGreen};
     &.active { text-decoration: underline; }
 
     @media (max-width: 540px) {
@@ -22,13 +20,15 @@ const Subnav = props => {
     }
   }
 `;
-  const [p1, p2, p3] = appState.homePage.heroPanels;
+  const [p1, p2, p3, p4, p5] = appState.servicesPanels;
   return(
     <nav>
       <StyledList>
         <li><Link href={`/services/${p1.routeName}`}><a className="styled-link">{p1.title} | </a></Link></li>
         <li><Link href={`/services/${p2.routeName}`}><a className="styled-link">{p2.title} | </a></Link></li>
-        <li><Link href={`/services/${p3.routeName}`}><a className="styled-link">{p3.title}</a></Link></li>
+        <li><Link href={`/services/${p3.routeName}`}><a className="styled-link">{p3.title} | </a></Link></li>
+        <li><Link href={`/services/${p4.routeName}`}><a className="styled-link">{p4.title} | </a></Link></li>
+        <li><Link href={`/services/${p5.routeName}`}><a className="styled-link">{p5.title}</a></Link></li>
       </StyledList>
     </nav>
   )

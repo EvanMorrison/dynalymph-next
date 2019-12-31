@@ -50,17 +50,30 @@ const Mask = styled.div`
 
 const subheadBlock = css`
   position: absolute;
-  width: 800px;
+  width: 600px;
   max-width: 100%;
   height: 100px;
-  background-color: rgba(0, 0, 0, 0.6);
   transition: all 1.3s ease-in-out;
   border-radius: 30% 5px 30% 5px / 100px 0;
+  border-radius: 50px;
   transform: translate(-400px, -200px) scale(0.5);
   opacity: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  :after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    filter: blur(50px);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50px;
+  }
 `;
 
 const subheadBlockTwo = css`

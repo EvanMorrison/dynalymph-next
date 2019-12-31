@@ -10,7 +10,7 @@ class ServicesContainer extends React.Component {
     return (
       <Section topcolor="logoGreen">
         <Head>
-          <title>Services || Dynamic Lymphatics</title>
+          <title>Lymphatic Massage Services | Dynamic Lymphatics</title>
         </Head>
         <Subnav/>
         <SectionTitle>Services</SectionTitle>

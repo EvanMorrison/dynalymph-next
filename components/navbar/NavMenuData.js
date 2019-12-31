@@ -28,6 +28,18 @@ export default [
         icon: 'keyboard_arrow_right',
         children: null,
       },
+      {
+        label: 'Detoxification',
+        path: '/services/detoxification',
+        icon: 'keyboard_arrow_right',
+        children: null,
+      },
+      {
+        label: 'Breast Implant Illness',
+        path: '/services/breastimplantillness',
+        icon: 'keyboard_arrow_right',
+        children: null,
+      }
     ]
   },
   {

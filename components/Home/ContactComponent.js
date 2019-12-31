@@ -3,7 +3,7 @@ import Welcome from './welcome.mdx';
 import appdata from '../appState'
 import Link from 'next/link'
 import styled from '@emotion/styled';
-import { Row, Column, Paragraph } from '../AppStyles';
+import { Row, Column } from '../AppStyles';
 
 const ContactSection = styled(Row)`
   flex-flow: wrap;
@@ -76,7 +76,8 @@ const mdxStyle = {
     color: "#083"
   },
   hr: {
-    borderColor: "#083"
+    borderColor: "#083",
+    borderWidth: 0.5,
   },
   p: {
     lineHeight: "1.5em",
