@@ -70,7 +70,6 @@ const Name = styled.div`
 `;
 
 const mdxStyle = {
-  padding: 18,
   fontSize: "1.15em",
   fontWeight: 300,
   p: {
