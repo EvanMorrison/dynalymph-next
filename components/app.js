@@ -41,7 +41,7 @@ class App extends Component {
               gtag('js', new Date());
               gtag('config', 'UA-112343025-1');`}}/>
           <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
-          <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+          <meta httpEquiv="X-UA-Compatible" content="ie=edge"/>
           <meta name="theme-color" content="#000000"/>
           <meta name="description" content="Dynamic Lymphatics provides lymphatic drainage therapy (lymphatic massage) from Trish Romano, CLT, a Casely-Smith certified practitioner." key="long description"/>
         </Head>

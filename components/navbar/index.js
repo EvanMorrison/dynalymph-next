@@ -47,7 +47,7 @@ const BrandGroup = styled(Row)`
 
 const NavTitle = styled.h1`
   font-family: ${props => props.theme.titleFont};
-  font-size: 2.5em;
+  font-size: 2.25em;
   color: ${props => props.theme.contrastText};
   width: 240px;
   word-wrap: break-word;

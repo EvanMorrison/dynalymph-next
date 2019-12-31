@@ -41,5 +41,11 @@ export default [
     path: '/appointments',
     icon: 'schedule',
     children: null,
+  },
+  {
+    label: 'Location',
+    path: '/location',
+    icon: 'pin_drop',
+    children: null,
   }
 ];
