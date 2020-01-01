@@ -77,11 +77,11 @@ const SectionTitleStyle = styled.h1`
   } */
 
   @media (max-width: 428px) {
-    font-size: 1.6em;
+    font-size: 2.5em;
   }
 
   @media (min-width: 428px) and (max-width: 667px) {
-    font-size: 2em;
+    font-size: 2.5em;
   }
 
   @media (min-width: 668px) and (max-width: 1023px) {
@@ -123,6 +123,10 @@ export const Paragraph = styled.div`
   line-height: 1.5em;
   max-width: 38em;
   text-align: justify;
+
+  @media screen and (max-width: 667px) {
+    text-align: left;
+  }
 
   p {
     margin-top: 2em;

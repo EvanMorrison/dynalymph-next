@@ -32,7 +32,7 @@ const Brand = styled.div`
       scale(${props => 1 - props.position > 0.85 ? 1 - props.position : 0.85})
       translateY(${props => -40 * (props.position)}px);
     margin-left: 2%;
-    font-size: 80%;
+    font-size: 70%;
 
     &:after {
       width: 65px;

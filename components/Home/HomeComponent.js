@@ -10,7 +10,7 @@ const HomeSection = styled.div`
   padding: 80px 0 180px;
   background: transparent;
   justify-content: center;
-
+  overflow: hidden;
   :after {
     content: '';
     position: absolute;
