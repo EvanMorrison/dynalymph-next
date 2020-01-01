@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 const HomeSection = styled.div`
-  height: calc(100vh - 50px);
+  height: 100vh;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -16,7 +16,7 @@ const HomeSection = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
+    height: calc(100% - 50px);
     width: 100%;
     z-index: -1;
     /* background-image: url(/assets/rocky-stream-1280x853.jpeg), linear-gradient(${props => props.theme.primary}, ${props => props.theme.primary}); */
@@ -44,7 +44,6 @@ const Mask = styled.div`
   width: 100%;
   border-top: 12px solid ${props => props.theme.logoGreen};
   border-radius: 100% 0 0 0/ 100px 0 0 0;
-  bottom: -170px;
 `;
 
 const subheadBlock = css`
