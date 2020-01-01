@@ -3,7 +3,6 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 const HomeSection = styled.div`
-  /* height: calc(100vh - 50px); */
   height: 100vh;
   position: relative;
   display: flex;
@@ -19,9 +18,9 @@ const HomeSection = styled.div`
     left: 0;
     height: 100%;
     width: 100%;
-
     z-index: -1;
-    background-image: url(/assets/rocky-stream-1280x853.jpeg), linear-gradient(${props => props.theme.primary}, ${props => props.theme.primary});
+    /* background-image: url(/assets/rocky-stream-1280x853.jpeg), linear-gradient(${props => props.theme.primary}, ${props => props.theme.primary}); */
+    background-image: url(/assets/water-1444951_1280.jpg), linear-gradient(${props => props.theme.primary}, ${props => props.theme.primary});
     background-repeat: no-repeat;
     background-position: center center;
 
