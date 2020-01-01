@@ -7,7 +7,7 @@ import appState from '../../components/appState'
 
 class ServiceTwo extends React.Component {
   render() {
-    const info = appState.servicesPanels[3];
+    const info = appState.servicesPanels[4];
     return (
       <Section topcolor="logoGreen">
         <Subnav/>

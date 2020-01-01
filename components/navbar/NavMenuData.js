@@ -11,14 +11,20 @@ export default [
     icon: 'accessibility',
     children: [
       {
+        label: 'Wellness',
+        path: '/services/wellness',
+        icon: 'keyboard_arrow_right',
+        children: null,
+      },
+      {
         label: 'Lymphedema',
         path: '/services/lymphedema',
         icon: 'keyboard_arrow_right',
         children: null,
       },
       {
-        label: 'Wellness',
-        path: '/services/wellness',
+        label: 'Lipedema',
+        path: '/services/lipedema',
         icon: 'keyboard_arrow_right',
         children: null,
       },

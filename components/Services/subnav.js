@@ -20,7 +20,7 @@ const Subnav = props => {
     }
   }
 `;
-  const [p1, p2, p3, p4, p5] = appState.servicesPanels;
+  const [p1, p2, p3, p4, p5, p6] = appState.servicesPanels;
   return(
     <nav>
       <StyledList>
@@ -29,7 +29,8 @@ const Subnav = props => {
         <li><Link href={`/services/${p2.routeName}`}><a className="styled-link">{p2.title} | </a></Link></li>
         <li><Link href={`/services/${p3.routeName}`}><a className="styled-link">{p3.title} | </a></Link></li>
         <li><Link href={`/services/${p4.routeName}`}><a className="styled-link">{p4.title} | </a></Link></li>
-        <li><Link href={`/services/${p5.routeName}`}><a className="styled-link">{p5.title}</a></Link></li>
+        <li><Link href={`/services/${p5.routeName}`}><a className="styled-link">{p5.title} | </a></Link></li>
+        <li><Link href={`/services/${p6.routeName}`}><a className="styled-link">{p6.title}</a></Link></li>
       </StyledList>
     </nav>
   )
