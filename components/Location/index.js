@@ -21,7 +21,7 @@ const LocationWrapper = styled(Row)`
     width: 100%;
     top: -10px;
     left: 0;
-    background-image: linear-gradient(${rgba("#034", 0.2)}, ${rgba("#034", 0.2)}), url(/assets/images/bubbles-2595227_1280.jpg);
+    background-image: linear-gradient(${rgba("#045", 0.6)}, ${rgba("#045", 0.6)}), url(/assets/images/bubbles-2595227_1280.jpg);
     background-size: cover;
     filter: blur(2px) contrast(125%);
     border-radius: 90% 0 0 0 / 150px 0 0 0;
@@ -46,7 +46,7 @@ const blurredWhiteBackground = css`
     width: 100%;
     top: 0;
     left: 0;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.6);
     filter: blur(40px);
   }
 `;
@@ -57,7 +57,7 @@ class LocationComponent extends React.Component {
       <LocationWrapper>
         <Column >
           <SectionHeading><span css={blurredWhiteBackground}>Where to Find Us</span></SectionHeading>
-          <div css={[{height: 80, width: 600, textAlign: "center", alignSelf: "center"}, blurredWhiteBackground]}>
+          <div css={[{height: 80, maxWidth: 600, marginBottom: 20, textAlign: "center", alignSelf: "center"}, blurredWhiteBackground]}>
             We are located in north Scottsdale just off the 101 on Bell Rd.<br/>Treatments are by appointment only, please text or call 310-283-9382
           </div>
           <Map />
