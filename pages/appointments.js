@@ -56,7 +56,7 @@ class AppointmentComponent extends React.Component {
     return (
       <Section topcolor="logoGreen">
         <Head>
-          <title>Appointments || Dynamic Lymphatics</title>
+          <title>Appointments | Dynamic Lymphatics</title>
           <link rel="stylesheet" href="https://unpkg.com/@material/button@4.0.0/dist/mdc.button.min.css"/>
           <link rel="stylesheet" href="https://unpkg.com/@material/textfield@4.0.0/dist/mdc.textfield.min.css"/>
         </Head>

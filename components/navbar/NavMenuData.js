@@ -11,14 +11,20 @@ export default [
     icon: 'accessibility',
     children: [
       {
+        label: 'Wellness',
+        path: '/services/wellness',
+        icon: 'keyboard_arrow_right',
+        children: null,
+      },
+      {
         label: 'Lymphedema',
         path: '/services/lymphedema',
         icon: 'keyboard_arrow_right',
         children: null,
       },
       {
-        label: 'Wellness',
-        path: '/services/wellness',
+        label: 'Lipedema',
+        path: '/services/lipedema',
         icon: 'keyboard_arrow_right',
         children: null,
       },
@@ -28,6 +34,18 @@ export default [
         icon: 'keyboard_arrow_right',
         children: null,
       },
+      {
+        label: 'Detoxification',
+        path: '/services/detoxification',
+        icon: 'keyboard_arrow_right',
+        children: null,
+      },
+      {
+        label: 'Breast Implant Illness',
+        path: '/services/breastimplantillness',
+        icon: 'keyboard_arrow_right',
+        children: null,
+      }
     ]
   },
   {
@@ -40,6 +58,12 @@ export default [
     label: 'Appointments',
     path: '/appointments',
     icon: 'schedule',
+    children: null,
+  },
+  {
+    label: 'Location',
+    path: '/location',
+    icon: 'pin_drop',
     children: null,
   }
 ];

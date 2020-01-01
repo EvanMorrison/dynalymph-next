@@ -1,24 +1,22 @@
-import LymphedemaMDX from '../../content/lymphedema.mdx'
+import MDXContent from '../../content/breastImplantIllness.mdx'
 import React from 'react';
 import Subnav from '../../components/Services/subnav';
 import { PropTypes } from 'prop-types';
 import { Section, SectionTitle, SectionBody, Paragraph } from '../../components/AppStyles';
 import appState from '../../components/appState'
 
-class Lymphedema extends React.Component {
+class ServiceTwo extends React.Component {
   render() {
-    const info = appState.servicesPanels[1];
+    const info = appState.servicesPanels[5];
     return (
       <Section topcolor="logoGreen">
-       <Subnav/>
+        <Subnav/>
         <SectionTitle image={info.image}>
           {info.title}
         </SectionTitle>
         <SectionBody>
           <Paragraph>
-            <div css={theme => ({h1: {marginTop: 50, fontStyle: "italic", fontWeight: "bold", fontFamily: theme.titleFont}})}>
-              <LymphedemaMDX/>
-            </div>
+            <MDXContent/>
           </Paragraph>
         </SectionBody>
       </Section>
@@ -26,8 +24,8 @@ class Lymphedema extends React.Component {
   }
 };
 
-Lymphedema.propTypes = {
+ServiceTwo.propTypes = {
   info: PropTypes.object
 };
 
-export default Lymphedema;
+export default ServiceTwo;

@@ -65,7 +65,7 @@ const NavItems = ({menuItems, ...props}) => {
         onMouseEnter={(m.children ? props.openPopoverMenu : props.closePopoverMenu)}
         onClick={props.handleClick}>
         <Link href={m.path} prefetch={false}>
-          <a css={theme => ([activeLink && {background: rgba(theme.primaryLt, 0.5)}])}>
+          <a className="styled-link" css={theme => ([activeLink && {background: rgba(theme.primaryLt, 0.5)}])}>
             <i className={`icon-${m.icon}`}>{m.icon}</i>
             {m.label}
           </a>
@@ -97,7 +97,7 @@ const Submenu = ({menuItem, ...props}) => {
           <MenuItem onClick={props.closePopoverMenu}
             {...menuItem}>
             <Link href={menuItem.path}>
-              <a css={css`* {color: #000000;}`}>
+              <a className="styled-link" css={css`* {color: #000000;}`}>
                 <i className={`icon-${menuItem.icon}`}>{menuItem.icon}</i>
                 <span>{menuItem.label}</span>
               </a>
@@ -109,7 +109,7 @@ const Submenu = ({menuItem, ...props}) => {
                 key={m.label}
                 onClick={props.closePopoverMenu}>
                 <Link href={m.path}>
-                  <a>
+                  <a className="styled-link">
                     <i className={`icon-${m.icon} submenu`} css={css`display: inline-block; position: relative; left: -8px; font-size: 20px;`} >{m.icon}</i>
                     <span css={{color: '#000000'}}>{m.label}</span>
                   </a>

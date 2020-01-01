@@ -1,29 +1,30 @@
-import appdata from '../appState'
 import React from 'react';
+import Welcome from './welcome.mdx';
+import appdata from '../appState'
+import Link from 'next/link'
 import styled from '@emotion/styled';
 import { Row, Column } from '../AppStyles';
 
 const ContactSection = styled(Row)`
+  flex-flow: wrap;
+  position: relative;
+  min-height: 500px;
+  width: 95%;
+  max-width: 1280px;
+  margin: 100px auto;
+  align-items: center;
+  justify-content: flex-start;
+  
   @media (max-width: 786px) {
     flex-direction: column;
     justify-content: flex-end;
     align-content: flex-end;
     align-items: flex-start;
-    padding-top: 80px;
   }
 
   @media (min-width: 768px) and (max-width: 1439px) {
     width: 80%;
   }
-
-  position: relative;
-  min-height: 500px;
-  width: 95%;
-  max-width: 1280px;
-  margin: 0 auto;
-  font-family: ${props => props.theme.headingFont};
-  align-items: center;
-  justify-content: flex-start;
 
   * {
     transition: all 0.3s ease-out;
@@ -68,8 +69,27 @@ const Name = styled.div`
   }
 `;
 
+const mdxStyle = {
+  fontSize: "1.15em",
+  fontWeight: 300,
+  h1: {
+    color: "#083"
+  },
+  hr: {
+    borderColor: "#083",
+    borderWidth: 0.5,
+  },
+  p: {
+    lineHeight: "1.5em",
+    maxWidth: "38em",
+  }
+};
+
 const ContactComponent = () => (
   <ContactSection>
+    <div css={[{marginBottom: 30, flex: "0 0 100%"}, mdxStyle]}>
+      <Welcome/>
+    </div>
     <Portrait src={appdata.trishPortrait} alt="Trish Romano, CLT"/>
     <Column>
       <Headline>
@@ -89,6 +109,7 @@ const ContactComponent = () => (
         </table>
       </Headline>
     </Column>
+      <div css={{margin: "30px 0 80px", flex: "0 0 100%"}}>Learn more about Trish on the <Link href="/about"><span css={{color: "#00E", cursor: "pointer"}}><a>About</a></span></Link> page</div>
   </ContactSection>
 );
 
