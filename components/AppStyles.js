@@ -11,7 +11,7 @@ export const theme = {
   logoOrange: '#FF7D09',
   logoGreen: '#66C368',
   titleFont: 'Bilbo Swash Caps',
-  headingFont: 'Montserrat',
+  headingFont: 'Arimo',
   bodyFont: 'Arimo',
   menuFont: 'Arimo'
 };
@@ -51,15 +51,14 @@ export const Section = styled(Column)`
   ${props => props.bottomcolor && `border-bottom: 12px solid ${props.theme[props.bottomcolor]}`};
 `;
 
-export const SectionTitle = styled.h1`
+const SectionTitleStyle = styled.h1`
   position: relative;
-  font-family: ${props => props.theme.titleFont};
+  font-family: ${props => props.theme.headingFont};
   font-style: italic;
-  font-size: 3.5em;
+  font-size: 2.5em;
   margin: 1em 0 1em;
   transition: all 0.2s ease-out;
-
-  &:after {
+  /* &:after {
     content: '';
     background-image: url(${props => props.image});
     background-size: cover;
@@ -75,7 +74,7 @@ export const SectionTitle = styled.h1`
     height: ${props => props.image ? 100 : 0}px;
     box-shadow: ${props => props.image && '2px 2px 2px #555'};
     border-radius: 2px 50%/ 20% 20px;
-  }
+  } */
 
   @media (max-width: 428px) {
     font-size: 1.6em;
@@ -99,6 +98,19 @@ export const SectionTitle = styled.h1`
     }
   }
 `;
+
+export const Divider = styled.hr`
+  border-color: #083;
+  border-width: 0.5px;
+  margin-top: 6px;
+`;
+
+export const SectionTitle = props => (
+  <SectionTitleStyle>
+    {props.children}
+    <Divider/>
+  </SectionTitleStyle>
+);
 
 export const SectionBody = styled.div`
   margin-bottom: 100px;

@@ -11,7 +11,9 @@ class Lymphedema extends React.Component {
     return (
       <Section topcolor="logoGreen">
        <Subnav/>
-        <SectionTitle image={info.image}>{info.title}</SectionTitle>
+        <SectionTitle image={info.image}>
+          {info.title}
+        </SectionTitle>
         <SectionBody>
           <Paragraph>
             <div css={theme => ({h1: {marginTop: 50, fontStyle: "italic", fontWeight: "bold", fontFamily: theme.titleFont}})}>

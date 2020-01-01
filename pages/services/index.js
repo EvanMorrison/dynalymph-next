@@ -13,13 +13,15 @@ class ServicesContainer extends React.Component {
           <title>Lymphatic Massage Services | Dynamic Lymphatics</title>
         </Head>
         <Subnav/>
-        <SectionTitle>Services</SectionTitle>
+        <SectionTitle>
+          Services
+        </SectionTitle>
         <SectionBody>
           <Paragraph>
             <ServicesMDX/>
           </Paragraph>
         </SectionBody>
-        <PanelsSection/>
+        {/* <PanelsSection/> */}
       </Section>
     );
   }

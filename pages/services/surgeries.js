@@ -10,7 +10,9 @@ const ServiceThree = () => {
   return (
     <Section topcolor="logoGreen">
       <Subnav/>
-      <SectionTitle image={info.image}>{info.title}</SectionTitle>
+      <SectionTitle image={info.image}>
+        {info.title}
+      </SectionTitle>
       <SectionBody>
         <Paragraph>
           <SurgeriesMDX/>

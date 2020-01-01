@@ -11,7 +11,9 @@ class ServiceTwo extends React.Component {
     return (
       <Section topcolor="logoGreen">
         <Subnav/>
-        <SectionTitle image={info.image}>{info.title}</SectionTitle>
+        <SectionTitle image={info.image}>
+          {info.title}
+        </SectionTitle>
         <SectionBody>
           <Paragraph>
             <MDXContent/>
