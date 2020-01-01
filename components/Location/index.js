@@ -21,9 +21,9 @@ const LocationWrapper = styled(Row)`
     width: 100%;
     top: -10px;
     left: 0;
-    background-image: linear-gradient(${rgba("#045", 0.6)}, ${rgba("#045", 0.6)}), url(/assets/images/bubbles-2595227_1280.jpg);
+    background-image: linear-gradient(${rgba("#00dfe0", 0.6)}, ${rgba("#00dfe0", 0.6)}), url(/assets/images/bubbles-2595227_1280.jpg);
     background-size: cover;
-    filter: blur(2px) contrast(125%);
+    filter: blur(2px) contrast(125%) hue-rotate(340deg) opacity(0.5);
     border-radius: 90% 0 0 0 / 150px 0 0 0;
   }
 `;
