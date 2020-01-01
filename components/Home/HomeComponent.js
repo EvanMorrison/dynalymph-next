@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 const HomeSection = styled.div`
-  height: 100vh;
+  height: calc(100vh - 50px);
   position: relative;
   display: flex;
   flex-direction: row;
@@ -16,7 +16,7 @@ const HomeSection = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    height: calc(100% - 50px);
+    height: 100%;
     width: 100%;
     z-index: -1;
     /* background-image: url(/assets/rocky-stream-1280x853.jpeg), linear-gradient(${props => props.theme.primary}, ${props => props.theme.primary}); */
@@ -38,7 +38,7 @@ const HomeSection = styled.div`
 
 const Mask = styled.div`
   position: absolute;
-  bottom: -115px;
+  bottom: 0px;
   background: #FFFFFF;
   height: 100px;
   width: 100%;
@@ -107,7 +107,7 @@ class HomeComponent extends React.Component {
       }
     `;
     return (
-      <React.Fragment>
+      <div css={{position: "relative", height: "calc(100vh - 50px)"}}>
         <Mask/>
         <HomeSection>
           <div css={[subheadBlock, entering && enteredStyle, css`
@@ -126,7 +126,7 @@ class HomeComponent extends React.Component {
             <h2 css={h2Style}>Manual Lymphatic Drainage is a hands-on therapy<br/> for stimulation and support of these vital processes</h2>
           </div>
         </HomeSection>
-      </React.Fragment>
+      </div>
     );
   }
 };
