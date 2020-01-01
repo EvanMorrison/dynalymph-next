@@ -5,48 +5,70 @@ import { rgba } from 'polished';
 import { Column } from '../AppStyles';
 
 const Panel = styled.div`
+  display: flex;
   margin: 20px;
   border-radius: 10px;
-  overflow: hidden;
-  background: ${props => rgba(props.theme.primary, 0.7)};
-  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.4);
   transition: all 0.4s ease-out;
 
   &:hover {
     cursor: pointer;
     transform: scale(1.02);
-    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4);
   }
 
   @media screen and (max-width: 1099px) {
     flex: 0 0 30%;
     width: 90%;
-    max-width: 400px;
     margin-bottom: 40px;
   }
 
   @media screen and (min-width: 1100px) {
     flex: 0 0 30%;
-    max-width: 400px;
-    height: 550px;
+    height: 80px;
+  }
+`;
+
+const Subpanel = styled.div`
+  position: relative;
+  display: flex;
+  margin-left: 30px;
+  /* background: ${props => rgba(props.theme.primary, 0.7)}; */
+  border-radius: 50px;
+  /* box-shadow: 1px 1px 10px 10px ${props => rgba(props.theme.primary, 0.7)}; */
+  &:hover {
+    /* box-shadow: 4px 4px 6px ${props => rgba(props.theme.primary, 1)}; */
+  }
+
+  :after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+    background: ${props => rgba(props.theme.primary, 0.7)};
+    /* filter: drop-shadow(0 0 4px ${props => rgba(props.theme.primary, 1)}); */
   }
 `;
 
 const PanelHeading = styled.h2`
-  width: 100%;
-  height: 84px;
-  line-height: 84px;
-  font-family: ${props => props.theme.titleFont};
-  font-size: 3em;
-  text-align: center;
-  color: ${props => props.color};
-  text-shadow: 1px 1px #222244;
-  background-image: linear-gradient(to bottom, ${props => rgba(props.theme.primary, 0.4)}, ${props => rgba(props.theme.primary, 0.4)} 10%, ${props => rgba(props.theme.primary, 0.5)} 90%);
+  width: 400px;
+  height: 80px;
+  line-height: 80px;
+  font-family: ${props => props.theme.headingFont};
+  font-size: 2em;
+  text-align: left;
+  padding-left: 30px;
+  color: #000;
+  /* text-shadow: 1px 1px #222244; */
+  /* background-image: linear-gradient(to bottom, ${props => rgba(props.theme.primary, 0.4)}, ${props => rgba(props.theme.primary, 0.4)} 10%, ${props => rgba(props.theme.primary, 0.5)} 90%); */
 `;
 
 const PanelImg = styled.img`
-  max-height: 250px;
-  min-width: 100%;
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
 
   @media screen and (max-width: 1099px) {
     max-height: 200px;
@@ -60,13 +82,12 @@ const PanelImg = styled.img`
 `;
 
 const PanelContent = styled(Column)`
-  padding: 20px 40px;
-  margin-bottom: 20px;
+  padding: 12px;
+  height: 80px;
 `;
 
 const PanelText = styled.p`
   font-family: ${props => props.theme.bodyFont};
-  ${''/* text-align: justify; */}
   font-size: 1.2em;
   font-weight: 300;
   opacity: 0.87;
@@ -75,13 +96,15 @@ const PanelText = styled.p`
 
 const PanelComponent = ({props, color, onClick}) => (
   <Panel onClick={onClick}>
-    <PanelHeading color={color}>
-      <em>{props.title}</em>
-    </PanelHeading>
-    <PanelImg src={props.image} alt={`props.title image`}/>
-    <PanelContent>
-      <PanelText>{props.text} </PanelText>
-    </PanelContent>
+    <PanelImg src={props.image} alt={`${props.title} image`}/>
+    <Subpanel>
+      <PanelHeading color={color}>
+        <em>{props.title}</em>
+      </PanelHeading>
+      {/* <PanelContent>
+        <PanelText>{props.text} </PanelText>
+      </PanelContent> */}
+    </Subpanel>
   </Panel>
 );
 

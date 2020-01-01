@@ -9,9 +9,11 @@ const AboutComponent = (props) => {
   return (
     <Section topcolor="logoGreen">
       <Head>
-        <title>About || Dynamic Lymphatics</title>
+        <title>About | Dynamic Lymphatics</title>
       </Head>
-      <SectionTitle>About</SectionTitle>
+      <SectionTitle>
+        About
+      </SectionTitle>
       <SectionBody>
         <img src={appdata.trishPortrait} alt="Trish Romano" css={css`
           float: left;

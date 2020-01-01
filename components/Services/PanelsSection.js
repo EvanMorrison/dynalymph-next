@@ -8,15 +8,15 @@ import {theme} from '../AppStyles'
 
 const ServicesPanels = styled.div`
   position: relative;
-  top: -85px;
+  top: -100px;
   display: flex;
-  flex-direction: row;
-  padding: 80px 0 180px;
+  flex-direction: column;
+  padding: 30px 0 180px;
   background: transparent;
   justify-content: center;
   z-index: 1;
 
-  :after {
+  /* :after {
     content: '';
     position: absolute;
     top: 0;
@@ -39,7 +39,7 @@ const ServicesPanels = styled.div`
     border-radius: 0 0 100% 0/ 100px 0 200px 0;
     border-top: 12px solid ${props => props.theme.logoGreen};
     border-bottom: 12px solid ${props => props.theme.logoGreen};
-  }
+  } */
 
   @media screen and (max-width: 1023px) {
     flex-direction: column;
@@ -50,8 +50,8 @@ const ServicesPanels = styled.div`
 
 class PanelsSection extends React.Component {
   state = {
-    panels: appState.homePage.heroPanels,
-    routes: [appState.homePage.heroPanels[0].routeName, appState.homePage.heroPanels[1].routeName, appState.homePage.heroPanels[2].routeName]
+    panels: appState.servicesPanels,
+    routes: appState.servicesPanels.map(p => p.routeName)
   }
 
   panelClick = (event, i) => {
@@ -64,7 +64,7 @@ class PanelsSection extends React.Component {
     return (
       <ServicesPanels>
         {panels.map((p, i) => {
-          return (<PanelComponent key={i} props={p} color={colors[i]} onClick={(e) => this.panelClick(e, i)}/>);
+          return (<PanelComponent key={i} props={p} color={colors[0]} onClick={(e) => this.panelClick(e, i)}/>);
         })}
       </ServicesPanels>
     );
