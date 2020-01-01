@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 const HomeSection = styled.div`
-  height: 100vh;
+  height: calc(100vh - 50px);
   position: relative;
   display: flex;
   flex-direction: row;

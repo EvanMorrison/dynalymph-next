@@ -58,23 +58,6 @@ const SectionTitleStyle = styled.h1`
   font-size: 3.3em;
   margin: 1em 0 1em;
   transition: all 0.2s ease-out;
-  /* &:after {
-    content: '';
-    background-image: url(${props => props.image});
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    position: absolute;
-    top: 50%;
-    left: 450px;
-    transform: translateY(-50%);
-    margin-left: 50px;
-    display: inline-block;
-    width: 150px;
-    height: ${props => props.image ? 100 : 0}px;
-    box-shadow: ${props => props.image && '2px 2px 2px #555'};
-    border-radius: 2px 50%/ 20% 20px;
-  } */
 
   @media (max-width: 428px) {
     font-size: 2.5em;
