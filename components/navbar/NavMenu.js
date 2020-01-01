@@ -43,14 +43,14 @@ const NavList = styled.ul`
   }
 
   @media (max-width: 1023px) {
-    margin-top: 50px;
+    margin-top: 10px;
 
     li {
       display: block;
 
       * {
         font-size: 1em;
-        line-height: 2em;
+        line-height: 1.7em;
       }
     }
   }

@@ -32,7 +32,7 @@ const DrawerHeader = styled(Row)`
 const Logo = styled.div`
   width: 80px;
   height: 80px;
-  margin: 20px;
+  margin: 10px;
 `;
 
 class MobileNavComponent extends Component {
@@ -59,7 +59,7 @@ class MobileNavComponent extends Component {
           <DrawerHeader>
             <Logo>
               <h1 css={theme => ({fontFamily: theme.titleFont, color: theme.contrastText})}>
-                <em>Dynamic<br/>Lymphatics</em>
+                <em>Dynamic Lymphatics</em>
               </h1>
             </Logo>
           </DrawerHeader>
