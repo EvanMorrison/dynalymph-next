@@ -2,16 +2,22 @@ export default {
   trishPortrait: '/assets/trish-170x228.jpg',
   servicesPanels: [
     {
+      title: 'Wellness',
+      routeName: 'wellness',
+      image: '/assets/images/man-2609375_640.jpg',
+      text: 'Lymphatic massage helps support ongoing wellness & vitality...[click to learn more]'
+    },
+    {
       title: 'Lymphedema',
       routeName: 'lymphedema',
       image: '/assets/images/sundress-336590_640.jpg',
       text: 'Our Manual Lymphatic Drainage is a gold-standard support for lymphedema...[click to learn more]'
     },
     {
-      title: 'Wellness',
-      routeName: 'wellness',
-      image: '/assets/images/man-2609375_640.jpg',
-      text: 'Lymphatic massage helps support ongoing wellness & vitality...[click to learn more]'
+      title: 'Lipedema',
+      routeName: 'lipedema',
+      image: '',
+      text: ''
     },
     {
       title: 'Pre & Post Surgical',

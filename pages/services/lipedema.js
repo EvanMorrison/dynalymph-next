@@ -1,4 +1,4 @@
-import MDXContent from '../../content/detoxification.mdx'
+import MDXContent from '../../content/lipedema.mdx'
 import React from 'react';
 import Subnav from '../../components/Services/subnav';
 import { PropTypes } from 'prop-types';
@@ -7,13 +7,11 @@ import appState from '../../components/appState'
 
 class ServiceTwo extends React.Component {
   render() {
-    const info = appState.servicesPanels[4];
+    const info = appState.servicesPanels[2];
     return (
       <Section topcolor="logoGreen">
         <Subnav/>
-        <SectionTitle image={info.image}>
-          {info.title}
-        </SectionTitle>
+        <SectionTitle image={info.image}>{info.title}</SectionTitle>
         <SectionBody>
           <Paragraph>
             <MDXContent/>
