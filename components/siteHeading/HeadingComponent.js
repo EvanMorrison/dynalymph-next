@@ -43,6 +43,7 @@ const Brand = styled.div`
 
 const BrandName = styled.h1`
   font-family: ${props => props.theme.titleFont};
+  font-style: italic;
   font-size: 4em;
 `;
 
@@ -57,7 +58,7 @@ class HeadingComponent extends React.Component {
       <StyledWrapper>
         <Column>
           <Brand position={this.props.position}>
-            <BrandName><em>Dynamic Lymphatics</em></BrandName>
+            <BrandName>Dynamic Lymphatics</BrandName>
             <Tagline>Lymphatic Drainage Therapy</Tagline>
           </Brand>
         </Column>

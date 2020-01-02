@@ -11,7 +11,7 @@ const ContactSection = styled(Row)`
   min-height: 500px;
   width: 95%;
   max-width: 1280px;
-  margin: 100px auto;
+  margin: 20px auto;
   align-items: center;
   justify-content: flex-start;
   
@@ -69,25 +69,31 @@ const Name = styled.div`
   }
 `;
 
-const mdxStyle = {
+const mdxStyle = theme => ({
   fontSize: "1.15em",
   fontWeight: 300,
   h1: {
-    color: "#083"
+    fontSize: "3em",
+    fontFamily: theme.titleFont,
+    fontWeight: 500
   },
   hr: {
     borderColor: "#083",
     borderWidth: 0.5,
+    marginTop: 6
   },
-  p: {
+  "p:first-of-type, p:last-of-type": {
+    margin: "50px 0",
+  },
+  "p, ul": {
     lineHeight: "1.5em",
     maxWidth: "38em",
-  }
-};
+  },
+});
 
 const ContactComponent = () => (
   <ContactSection>
-    <div css={[{marginBottom: 30, flex: "0 0 100%"}, mdxStyle]}>
+    <div css={theme => ([{marginBottom: 50, flex: "0 0 100%"}, mdxStyle(theme)])}>
       <Welcome/>
     </div>
     <Portrait src={appdata.trishPortrait} alt="Trish Romano, CLT"/>

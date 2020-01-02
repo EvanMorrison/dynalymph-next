@@ -54,7 +54,7 @@ export const Section = styled(Column)`
 const SectionTitleStyle = styled.h1`
   position: relative;
   font-family: ${props => props.theme.titleFont};
-  font-style: italic;
+  /* font-weight: 500; */
   font-size: 3.3em;
   margin: 1em 0 1em;
   transition: all 0.2s ease-out;
