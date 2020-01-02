@@ -50,6 +50,7 @@ const BrandName = styled.h1`
 const Tagline = styled.h3`
   font-family: ${props => props.theme.bodyFont};
   font-size: 1.1em;
+  padding-left: 8px;
 `;
 
 class HeadingComponent extends React.Component {

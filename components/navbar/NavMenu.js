@@ -42,6 +42,12 @@ const NavList = styled.ul`
     }
   }
 
+  @media (min-width: 1024px) and (max-width: 1084px) {
+    > li a {
+      padding: 8px 16px;
+    }
+  }
+
   @media (max-width: 1023px) {
     margin-top: 10px;
 

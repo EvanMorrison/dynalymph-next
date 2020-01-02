@@ -8,6 +8,7 @@ const DesktopNavWrapper = styled(Row)`
   flex: 1;
   justify-content: flex-end;
   align-items: center;
+  min-width: 520px;
 
   @media (max-width: 1023px) {
     display: none;

@@ -20,6 +20,7 @@ const DrawerStyle = styled('div')`
   transition: left 0.3s linear;
   left: ${props => props.isOpen ? 0 : '-250px'};
   background-color: #FFFFFF;
+  overflow-y: auto;
 `;
 
 export default class Drawer extends Component {

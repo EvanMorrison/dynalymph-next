@@ -5,6 +5,7 @@ import { rgba } from 'polished';
 
 const HomeSection = styled.div`
   height: calc(100vh - 50px);
+  min-height: 420px;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -107,7 +108,7 @@ class HomeComponent extends React.Component {
       }
     `;
     return (
-      <div css={{position: "relative", height: "calc(100vh - 50px)"}}>
+      <div css={{position: "relative", height: "calc(100vh - 50px)", minHeight: 420}}>
         <Mask/>
         <HomeSection>
           <div css={[subheadBlock, entering && enteredStyle, css`
