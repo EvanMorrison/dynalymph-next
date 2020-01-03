@@ -67,9 +67,7 @@ class NavItem extends React.Component {
     popoverOpen: false,
   }
 
-  openPopoverMenu = event => {
-    event.preventDefault();
-    this.props.setHoverIndex(this.props.index);
+  openPopoverMenu = () => {
     this.setState({popoverOpen: true});
   }
 
@@ -83,8 +81,12 @@ class NavItem extends React.Component {
     } else if (this.props.isDrawerOpen !== prevProps.isDrawerOpen && prevProps.isDrawerOpen) {
       this.setState({popoverOpen: false});
     }
-    if (this.props.hoverIndex !== prevProps.hoverIndex && this.props.hoverIndex !== this.props.index) {
-      this.closePopoverMenu();
+    if (this.props.hoverIndex !== prevProps.hoverIndex) {
+      if (this.props.hoverIndex === this.props.index) {
+        this.openPopoverMenu();
+      } else {
+        this.closePopoverMenu();
+      }
     }
   }
 
@@ -92,7 +94,7 @@ class NavItem extends React.Component {
     const {activeLink, index, m, ...props} = this.props;
     return(
       <li key={m.label}
-        onMouseEnter={(m.children ? this.openPopoverMenu : () => props.setHoverIndex(index))}
+        onMouseEnter={() => props.setHoverIndex(index)}
         onClick={props.handleClick}>
         <Link href={m.path} prefetch={false}>
           <a className="styled-link" css={theme => ([activeLink && {background: rgba(theme.primaryLt, 0.5)}])}>
@@ -129,12 +131,12 @@ const NavItems = ({menuItems, ...props}) => {
 
 const Submenu = ({menuItem, ...props}) => {
   return (
-    <Popover open={props.popoverOpen} length={menuItem.children.length}
+    <Popover open={props.popoverOpen} itemCount={menuItem.children.length + 1}
       render={(popoverState) => (
-        <Menu onMouseLeave={props.closePopoverMenu}
+        <Menu onMouseLeave={props.setHoverIndex}
           onClick={props.handleClick}
           {...popoverState}>
-          <MenuItem onClick={props.closePopoverMenu}
+          <MenuItem onClick={props.setHoverIndex}
             {...menuItem}>
             <Link href={menuItem.path}>
               <a className="styled-link" css={css`* {color: #000000;}`}>
@@ -147,7 +149,7 @@ const Submenu = ({menuItem, ...props}) => {
             return (
               <MenuItem
                 key={m.label}
-                onClick={props.closePopoverMenu}>
+                onClick={props.setHoverIndex}>
                 <Link href={m.path}>
                   <a className="styled-link">
                     <i className={`icon-${m.icon} submenu`} css={css`display: inline-block; position: relative; left: -8px; font-size: 20px;`} >{m.icon}</i>
@@ -174,7 +176,7 @@ class NavMenu extends React.Component {
 
   render() {
     return (
-      <nav className="navbar">
+      <nav className="navbar" onMouseLeave={() => this.setHoverIndex(null)}>
         <NavList position={this.props.position}
           isMobile={this.props.isMobile}>
           <NavItems {...this.props}

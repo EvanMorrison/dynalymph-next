@@ -9,7 +9,7 @@ const LymphaticSystem = () => (
   <Head>
     <title>Lymphatic System | Dynamic Lymphatics</title>
   </Head>
-  <img src="/assets/images/lymphatic_system_blue.png" css={{position: "absolute", right: 0, bottom: 150, opacity: 0.8}}/>
+  {/* <img src="/assets/images/lymphatic_system_blue_crop.png" css={{position: "absolute", right: 0, bottom: 150, opacity: 0.8}}/> */}
   <Section
     nav={<Subnav/>}
     title="The Lymphatic System"

@@ -40,7 +40,7 @@ export default {
   ],
   about: [
     {
-      title: 'Trish Romano',
+      title: 'Trish Romano, CLT',
       routeName: 'trishromano',
     },
     {
