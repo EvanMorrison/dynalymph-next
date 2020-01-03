@@ -52,7 +52,20 @@ export default [
     label: 'About',
     path: '/about',
     icon: 'account_circle',
-    children: null,
+    children: [
+      {
+        label: 'Trish Romano, CLT',
+        path: '/about/trishromano',
+        icon: 'keyboard_arrow_right',
+        children: null,
+      },
+      {
+        label: 'The Lymphatic System',
+        path: '/about/lymphaticSystem',
+        icon: 'keyboard_arrow_right',
+        children: null,
+      }
+    ]
   },
   {
     label: 'Appointments',

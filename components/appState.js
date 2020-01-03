@@ -1,6 +1,6 @@
 export default {
   trishPortrait: '/assets/trish-170x228.jpg',
-  servicesPanels: [
+  services: [
     {
       title: 'Wellness',
       routeName: 'wellness',
@@ -36,6 +36,16 @@ export default {
       routeName: 'breastimplantillness',
       image: '/assets/images/woman-3371263_640.jpg',
       text: 'Infection, swelling, & disease from breast implants present unique challenges...[click to learn more]'
+    }
+  ],
+  about: [
+    {
+      title: 'Trish Romano',
+      routeName: 'trishromano',
+    },
+    {
+      title: 'The Lymphatic System',
+      routeName: 'lymphaticSystem'
     }
   ]
 };

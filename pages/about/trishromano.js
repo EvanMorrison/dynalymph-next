@@ -1,9 +1,10 @@
-import appdata from '../components/appState';
-import AboutMDX from '../content/about.mdx';
-import Head from 'next/head'
 import React from 'react';
+import Head from 'next/head'
+import MDXContent from '../../content/about.mdx';
+import Subnav from '../../components/About/subnav'
+import appdata from '../../components/appState';
+import { SectionStyle, SectionTitle, SectionBody, Paragraph } from '../../components/AppStyles';
 import { css } from '@emotion/core';
-import { SectionStyle, SectionTitle, SectionBody, Paragraph } from '../components/AppStyles';
 
 const AboutComponent = (props) => {
   return (
@@ -11,9 +12,10 @@ const AboutComponent = (props) => {
       <Head>
         <title>About | Dynamic Lymphatics</title>
       </Head>
-      <SectionTitle title="About"/>
+      <Subnav/>
+      <SectionTitle title="About Trish Romano, clt"/>
       <SectionBody>
-        <img src={appdata.trishPortrait} alt="Trish Romano" css={css`
+        <img src={appdata.trishPortrait} alt="Trish Romano, CLT" css={css`
           float: left;
           margin: 0 20px 0 0;
           width: 170px;
@@ -21,7 +23,7 @@ const AboutComponent = (props) => {
           @media (max-width: 426px) { width: 120px; }
         `}/>
         <Paragraph>
-          <AboutMDX/>
+          <MDXContent/>
         </Paragraph>
       </SectionBody>
     </SectionStyle>

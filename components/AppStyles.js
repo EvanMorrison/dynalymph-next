@@ -54,7 +54,7 @@ export const SectionStyle = styled(Column)`
 const SectionTitleStyle = styled.h1`
   position: relative;
   font-family: ${props => props.theme.titleFont};
-  /* font-weight: 500; */
+  font-weight: 500;
   font-size: 3.3em;
   margin: 1em 0 1em;
   transition: all 0.2s ease-out;
@@ -131,3 +131,23 @@ export const Section = props => (
     </SectionBody>
   </SectionStyle>
 );
+
+export const StyledList = styled.ul`
+  list-style: none;
+  margin-top: 40px;
+
+  li {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 18px;
+    color: ${props => props.theme.logoGreen};
+
+    &.active {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 540px) {
+      display: block;
+    }
+  }
+`;
