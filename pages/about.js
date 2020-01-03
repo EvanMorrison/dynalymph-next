@@ -3,17 +3,15 @@ import AboutMDX from '../content/about.mdx';
 import Head from 'next/head'
 import React from 'react';
 import { css } from '@emotion/core';
-import { Section, SectionTitle, SectionBody, Paragraph } from '../components/AppStyles';
+import { SectionStyle, SectionTitle, SectionBody, Paragraph } from '../components/AppStyles';
 
 const AboutComponent = (props) => {
   return (
-    <Section topcolor="logoGreen">
+    <SectionStyle topcolor="logoGreen">
       <Head>
         <title>About | Dynamic Lymphatics</title>
       </Head>
-      <SectionTitle>
-        About
-      </SectionTitle>
+      <SectionTitle title="About"/>
       <SectionBody>
         <img src={appdata.trishPortrait} alt="Trish Romano" css={css`
           float: left;
@@ -26,7 +24,7 @@ const AboutComponent = (props) => {
           <AboutMDX/>
         </Paragraph>
       </SectionBody>
-    </Section>
+    </SectionStyle>
   );
 };
 

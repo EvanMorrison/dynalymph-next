@@ -39,7 +39,7 @@ export const Column = styled.div`
   flex: 1;
 `;
 
-export const Section = styled(Column)`
+export const SectionStyle = styled(Column)`
   width: 100%;
   max-width: 1440px;
   overflow-x: hidden;
@@ -90,7 +90,7 @@ export const Divider = styled.hr`
 
 export const SectionTitle = props => (
   <SectionTitleStyle>
-    {props.children}
+    {props.title}
     <Divider/>
   </SectionTitleStyle>
 );
@@ -119,3 +119,15 @@ export const Paragraph = styled.div`
     }
   }
 `;
+
+export const Section = props => (
+  <SectionStyle topcolor="logoGreen">
+    {props.nav}
+    <SectionTitle image={props.image} title={props.title}/>
+    <SectionBody>
+      <Paragraph>
+        {props.content}
+      </Paragraph>
+    </SectionBody>
+  </SectionStyle>
+);

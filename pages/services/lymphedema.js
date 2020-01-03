@@ -1,33 +1,21 @@
-import LymphedemaMDX from '../../content/lymphedema.mdx'
 import React from 'react';
+import Head from 'next/head';
+import MDXContent from '../../content/lymphedema.mdx'
 import Subnav from '../../components/Services/subnav';
-import { PropTypes } from 'prop-types';
-import { Section, SectionTitle, SectionBody, Paragraph } from '../../components/AppStyles';
-import appState from '../../components/appState'
+import { Section } from '../../components/AppStyles';
 
-class Lymphedema extends React.Component {
-  render() {
-    const info = appState.servicesPanels[1];
-    return (
-      <Section topcolor="logoGreen">
-       <Subnav/>
-        <SectionTitle image={info.image}>
-          {info.title}
-        </SectionTitle>
-        <SectionBody>
-          <Paragraph>
-            <div css={theme => ({h1: {marginTop: 50, fontStyle: "italic", fontWeight: "bold", fontFamily: theme.titleFont}})}>
-              <LymphedemaMDX/>
-            </div>
-          </Paragraph>
-        </SectionBody>
-      </Section>
-    );
-  }
-};
-
-Lymphedema.propTypes = {
-  info: PropTypes.object
-};
+const Lymphedema = () => (
+  <>
+    <Head>
+      <title>Lymphedema | Lymphatic Massage Services | Dynamic Lymphatics</title>
+    </Head>
+    <Section
+      topcolor="logoGreen"
+      nav={<Subnav/>}
+      title="Lymphedema"
+      content={<MDXContent/>}
+    />
+  </>
+);
 
 export default Lymphedema;

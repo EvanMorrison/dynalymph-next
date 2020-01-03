@@ -1,31 +1,21 @@
-import MDXContent from '../../content/breastImplantIllness.mdx'
 import React from 'react';
+import Head from 'next/head';
+import MDXContent from '../../content/breastImplantIllness.mdx'
 import Subnav from '../../components/Services/subnav';
-import { PropTypes } from 'prop-types';
-import { Section, SectionTitle, SectionBody, Paragraph } from '../../components/AppStyles';
-import appState from '../../components/appState'
+import { Section } from '../../components/AppStyles';
 
-class ServiceTwo extends React.Component {
-  render() {
-    const info = appState.servicesPanels[5];
-    return (
-      <Section topcolor="logoGreen">
-        <Subnav/>
-        <SectionTitle image={info.image}>
-          {info.title}
-        </SectionTitle>
-        <SectionBody>
-          <Paragraph>
-            <MDXContent/>
-          </Paragraph>
-        </SectionBody>
-      </Section>
-    );
-  }
-};
+const BreastImplantIllness = () => (
+  <>
+    <Head>
+      <title>Breast Implant Illness | Lymphatic Massage Services | Dynamic Lymphatics</title>
+    </Head>
+    <Section
+      topcolor="logoGreen"
+      nav={<Subnav/>}
+      title="Breast Implant Illness"
+      content={<MDXContent/>}
+    />
+  </>
+);
 
-ServiceTwo.propTypes = {
-  info: PropTypes.object
-};
-
-export default ServiceTwo;
+export default BreastImplantIllness;
