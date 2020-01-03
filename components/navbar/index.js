@@ -49,7 +49,6 @@ const NavTitle = styled.h1`
   font-family: ${props => props.theme.titleFont};
   font-size: 2.25em;
   color: ${props => props.theme.contrastText};
-  width: 240px;
   word-wrap: break-word;
 `;
 
@@ -58,7 +57,7 @@ const NavSubtitle = styled.h4`
   font-family: ${props => props.theme.bodyFont};
   color: ${props => props.theme.contrastText};
   min-width: 17em;
-  padding-left: 5px;
+  padding-left: 6px;
 `;
 
 const NavContact = styled.p`
