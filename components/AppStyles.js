@@ -57,7 +57,6 @@ const SectionTitleStyle = styled.h1`
   font-size: 3.3rem;
   margin: 1em 0 1em;
   transition: all 0.2s ease-out;
-  z-index: -1;
 
   @media (max-width: 667px) {
     font-size: 2.5rem;
@@ -116,15 +115,17 @@ export const Paragraph = styled.div`
   const SectionImage = props => {
     const imgStyle = css`
       position: absolute;
-      width: 300px;
-      right: 0;
-      top: -80px;
+      height: '100%';
+      top: 0;
+      opacity: 0.7;
       z-index: -1;
 
-      @media (max-width: 1023px) {
-        top: 0;
-        bottom: unset;
-        position: relative;
+      @media (min-width: 900px) {
+        right: 0;
+      }
+
+      @media (max-weight: 899px) {
+        left: 15%;
       }
     `;
     return(
@@ -140,8 +141,8 @@ export const Section = props => (
       <Paragraph>
         {props.content}
       </Paragraph>
-      <SectionImage image={props.image}/>
     </SectionBody>
+    <SectionImage image={props.image}/>
   </SectionStyle>
 );
 
