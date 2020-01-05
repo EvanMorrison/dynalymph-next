@@ -54,17 +54,13 @@ const SectionTitleStyle = styled.h1`
   position: relative;
   font-family: ${props => props.theme.titleFont};
   font-weight: 500;
-  font-size: 3.3em;
+  font-size: 3.3rem;
   margin: 1em 0 1em;
   transition: all 0.2s ease-out;
   z-index: -1;
 
   @media (max-width: 667px) {
-    font-size: 2.5em;
-  }
-
-  @media (min-width: 668px) and (max-width: 1023px) {
-    font-size: 3em;
+    font-size: 2.5rem;
   }
 
   @media (max-width: 1023px) {

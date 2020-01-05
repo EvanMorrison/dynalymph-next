@@ -70,10 +70,10 @@ const Name = styled.div`
 `;
 
 const mdxStyle = theme => ({
-  fontSize: "1.15em",
+  fontSize: "1.15rem",
   fontWeight: 300,
   h1: {
-    fontSize: "3em",
+    fontSize: "3rem",
     fontFamily: theme.titleFont,
     fontWeight: 500
   },
@@ -91,7 +91,7 @@ const mdxStyle = theme => ({
   },
   "@media (max-width: 667px)": {
     h1: {
-      fontSize: "2.5em"
+      fontSize: "2.5rem"
     }
   }
 });
