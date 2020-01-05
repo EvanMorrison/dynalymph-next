@@ -6,14 +6,14 @@ import appdata from '../../components/appState';
 import { SectionStyle, SectionTitle, SectionBody, Paragraph } from '../../components/AppStyles';
 import { css } from '@emotion/core';
 
-const AboutComponent = (props) => {
+const AboutComponent = () => {
   return (
     <SectionStyle topcolor="logoGreen">
       <Head>
         <title>About | Dynamic Lymphatics</title>
       </Head>
       <Subnav/>
-      <SectionTitle title="About Trish Romano, clt"/>
+      <SectionTitle title="About Trish Romano"/>
       <SectionBody>
         <img src={appdata.trishPortrait} alt="Trish Romano, CLT" css={css`
           float: left;
