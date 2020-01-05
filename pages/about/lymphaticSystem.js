@@ -11,7 +11,7 @@ const LymphaticSystem = () => (
   </Head>
   <Section
     nav={<Subnav/>}
-    image="/assets/lymphaticSystem/lifespa-image-woman-lymphatic-system-full-body-graphic-white-background.png"
+    image="/assets/woman-lymphatic-system-full-body.png"
     title="The Lymphatic System"
     content={<MDXContent/>}
   />

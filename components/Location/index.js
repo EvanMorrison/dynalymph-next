@@ -21,7 +21,7 @@ const LocationWrapper = styled(Row)`
     width: 100%;
     top: -10px;
     left: 0;
-    background-image: linear-gradient(${rgba("#078", 0.6)}, ${rgba("#078", 0.6)}), url(/assets/images/stones-76525_1280.jpg);
+    background-image: linear-gradient(${rgba("#078", 0.6)}, ${rgba("#078", 0.6)}), url(/assets/stones-76525_1280.jpg);
     background-size: cover;
     border-radius: 90% 0 0 0 / 150px 0 0 0;
   }

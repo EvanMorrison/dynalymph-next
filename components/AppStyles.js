@@ -59,11 +59,7 @@ const SectionTitleStyle = styled.h1`
   transition: all 0.2s ease-out;
   z-index: -1;
 
-  @media (max-width: 428px) {
-    font-size: 2.5em;
-  }
-
-  @media (min-width: 428px) and (max-width: 667px) {
+  @media (max-width: 667px) {
     font-size: 2.5em;
   }
 
