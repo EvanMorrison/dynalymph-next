@@ -122,7 +122,7 @@ export const Paragraph = styled.div`
       position: absolute;
       width: 300px;
       right: 0;
-      top: -180px;
+      top: -80px;
       z-index: -1;
 
       @media (max-width: 1023px) {

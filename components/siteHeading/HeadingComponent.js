@@ -44,7 +44,6 @@ const Brand = styled.div`
 const BrandName = styled.h1`
   font-family: ${props => props.theme.titleFont};
   font-weight: 500;
-  font-style: italic;
   font-size: 4em;
 `;
 

@@ -81,7 +81,7 @@ class Navbar extends React.Component {
           <BrandGroup position={this.props.position}>
             <Column>
               <NavTitle >
-                <em>Dynamic Lymphatics</em>
+                Dynamic Lymphatics
               </NavTitle>
               <NavSubtitle>
               Lymphatic Drainage Therapy
