@@ -43,13 +43,13 @@ const Brand = styled.div`
 
 const BrandName = styled.h1`
   font-family: ${props => props.theme.titleFont};
-  font-weight: 500;
+  /* font-weight: 500; */
   font-size: 4em;
 `;
 
 const Tagline = styled.h3`
   font-family: ${props => props.theme.bodyFont};
-  font-weight: 500;
+  /* font-weight: 500; */
   font-size: 1.1em;
   padding-left: 0.7em;
 `;

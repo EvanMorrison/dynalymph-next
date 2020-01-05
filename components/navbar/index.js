@@ -47,7 +47,7 @@ const BrandGroup = styled(Row)`
 
 const NavTitle = styled.h1`
   font-family: ${props => props.theme.titleFont};
-  font-weight: 500;
+  /* font-weight: 500; */
   font-size: 2.25em;
   color: ${props => props.theme.contrastText};
   word-wrap: break-word;
@@ -56,7 +56,7 @@ const NavTitle = styled.h1`
 const NavSubtitle = styled.h4`
   margin-top: 5px;
   font-family: ${props => props.theme.bodyFont};
-  font-weight: 500;
+  /* font-weight: 500; */
   color: ${props => props.theme.contrastText};
   min-width: 17em;
   padding-left: 6px;
