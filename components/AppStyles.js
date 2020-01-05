@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-
+import { css } from '@emotion/core';
 // theme settings used with Emotion
 
 export const theme = {
@@ -46,24 +46,20 @@ export const SectionStyle = styled(Column)`
   min-height: calc(100vh - 270px);
   margin: 0 auto;
   padding: 50px 10%;
-  border-radius: 100% 0 100% 0/ 100px 0 200px 0;
+  border-radius: 100% 0 0 0 / 100px 0 0 0;
   ${props => props.topcolor && `border-top: 8px solid ${props.theme[props.topcolor]}`};
-  ${props => props.bottomcolor && `border-bottom: 12px solid ${props.theme[props.bottomcolor]}`};
 `;
 
 const SectionTitleStyle = styled.h1`
   position: relative;
   font-family: ${props => props.theme.titleFont};
-  /* font-weight: 500; */
+  font-weight: 500;
   font-size: 3.3em;
   margin: 1em 0 1em;
   transition: all 0.2s ease-out;
+  z-index: -1;
 
-  @media (max-width: 428px) {
-    font-size: 2.5em;
-  }
-
-  @media (min-width: 428px) and (max-width: 667px) {
+  @media (max-width: 667px) {
     font-size: 2.5em;
   }
 
@@ -97,6 +93,7 @@ export const SectionTitle = props => (
 
 export const SectionBody = styled.div`
   margin-bottom: 100px;
+  position: relative;
 `;
 
 export const Paragraph = styled.div`
@@ -120,14 +117,54 @@ export const Paragraph = styled.div`
   }
 `;
 
+  const SectionImage = props => {
+    const imgStyle = css`
+      position: absolute;
+      width: 300px;
+      right: 0;
+      top: -180px;
+      z-index: -1;
+
+      @media (max-width: 1023px) {
+        top: 0;
+        bottom: unset;
+        position: relative;
+      }
+    `;
+    return(
+      <img src={props.image} css={imgStyle}/>
+    )
+  };
+
 export const Section = props => (
-  <SectionStyle topcolor="logoGreen">
+  <SectionStyle topcolor='logoGreen'>
     {props.nav}
     <SectionTitle image={props.image} title={props.title}/>
     <SectionBody>
       <Paragraph>
         {props.content}
       </Paragraph>
+      <SectionImage image={props.image}/>
     </SectionBody>
   </SectionStyle>
 );
+
+export const StyledList = styled.ul`
+  list-style: none;
+  margin-top: 40px;
+
+  li {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 18px;
+    color: ${props => props.theme.logoGreen};
+
+    &.active {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 540px) {
+      display: block;
+    }
+  }
+`;

@@ -16,7 +16,7 @@ const PopoverStyle = styled('div')`
   ul, li, a {
     opacity: ${props => props.height ? 1 : 0};
     width: ${props => props.width}px;
-    height: ${props => props.height / 7}px;
+    height: ${props => props.height / (props.itemCount)}px;
     white-space: nowrap;
     transition: height 0.2s 0.1s ease-out, width 0.2s 0.1s ease-out, opacity 0.1s 0.1s ease-out;
   }
@@ -30,7 +30,8 @@ class Popover extends Component {
 
   componentDidUpdate = (prevProps) => {
     if (!prevProps.open && this.props.open) {
-      this.setState({height: 300, width: 240});
+      const height = this.props.itemCount * 50;
+      this.setState({height, width: 240});
     } else if (prevProps.open && !this.props.open) {
       this.setState({height: 0, width: 0});
     }
@@ -38,7 +39,7 @@ class Popover extends Component {
 
   render() {
     return (
-      <PopoverStyle isOpen={this.props.open} height={this.state.height} width={this.state.width}>
+      <PopoverStyle isOpen={this.props.open} height={this.state.height} width={this.state.width} itemCount={this.props.itemCount}>
         <div css={css`position: relative;`}>
           {this.props.render(this.state)}
         </div>

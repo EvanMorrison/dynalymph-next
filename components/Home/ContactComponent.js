@@ -89,6 +89,11 @@ const mdxStyle = theme => ({
     lineHeight: "1.5em",
     maxWidth: "38em",
   },
+  "@media (max-width: 667px)": {
+    h1: {
+      fontSize: "2.5em"
+    }
+  }
 });
 
 const ContactComponent = () => (

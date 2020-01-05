@@ -101,9 +101,9 @@ const PanelComponent = ({props, color, onClick}) => (
       <PanelHeading color={color}>
         <em>{props.title}</em>
       </PanelHeading>
-      {/* <PanelContent>
+      <PanelContent>
         <PanelText>{props.text} </PanelText>
-      </PanelContent> */}
+      </PanelContent>
     </Subpanel>
   </Panel>
 );

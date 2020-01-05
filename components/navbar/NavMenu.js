@@ -62,13 +62,39 @@ const NavList = styled.ul`
   }
 `;
 
-const NavItems = ({menuItems, ...props}) => {
-  const router = useRouter();
-  return (menuItems.map(m => {
-    const activeLink = router.pathname === m.path || (!props.isMobile && router.pathname.split("/")[1] === m.path.split("/").pop());
+class NavItem extends React.Component {
+  state = {
+    popoverOpen: false,
+  }
+
+  openPopoverMenu = () => {
+    this.setState({popoverOpen: true});
+  }
+
+  closePopoverMenu = () => {
+    if (!this.props.isDrawerOpen) this.setState({popoverOpen: false});
+  }
+
+  componentDidUpdate = (prevProps) => {
+    if (!this.props.isDrawerOpen && prevProps.isDrawerOpen) {
+      this.setState({popoverOpen: true}); // eslint-disable-line react/no-string-refs
+    } else if (this.props.isDrawerOpen !== prevProps.isDrawerOpen && prevProps.isDrawerOpen) {
+      this.setState({popoverOpen: false});
+    }
+    if (this.props.hoverIndex !== prevProps.hoverIndex) {
+      if (this.props.hoverIndex === this.props.index) {
+        this.openPopoverMenu();
+      } else {
+        this.closePopoverMenu();
+      }
+    }
+  }
+
+  render() {
+    const {activeLink, index, m, ...props} = this.props;
     return(
       <li key={m.label}
-        onMouseEnter={(m.children ? props.openPopoverMenu : props.closePopoverMenu)}
+        onMouseEnter={() => props.setHoverIndex(index)}
         onClick={props.handleClick}>
         <Link href={m.path} prefetch={false}>
           <a className="styled-link" css={theme => ([activeLink && {background: rgba(theme.primaryLt, 0.5)}])}>
@@ -84,23 +110,33 @@ const NavItems = ({menuItems, ...props}) => {
                   <NavItems {...props} menuItems={m.children} />
                 </ul>
               )
-              : <Submenu {...props} menuItem={m}/>
+              : <Submenu {...props} popoverOpen={this.state.popoverOpen} closePopoverMenu={this.closePopoverMenu} menuItem={m}/>
             : null
           )
         }
       </li>
+    )
+  }
+}
+
+const NavItems = ({menuItems, ...props}) => {
+  const router = useRouter();
+  return (menuItems.map((m, index) => {
+    const activeLink = router.pathname === m.path || (!props.isMobile && router.pathname.split("/")[1] === m.path.split("/").pop());
+    return(
+      <NavItem key={m.path} index={index} activeLink={activeLink} m={m} {...props}/>
     );
   }));
 };
 
 const Submenu = ({menuItem, ...props}) => {
   return (
-    <Popover open={props.popoverOpen}
+    <Popover open={props.popoverOpen} itemCount={menuItem.children.length + 1}
       render={(popoverState) => (
-        <Menu onMouseLeave={props.closePopoverMenu}
+        <Menu onMouseLeave={props.setHoverIndex}
           onClick={props.handleClick}
           {...popoverState}>
-          <MenuItem onClick={props.closePopoverMenu}
+          <MenuItem onClick={props.setHoverIndex}
             {...menuItem}>
             <Link href={menuItem.path}>
               <a className="styled-link" css={css`* {color: #000000;}`}>
@@ -113,7 +149,7 @@ const Submenu = ({menuItem, ...props}) => {
             return (
               <MenuItem
                 key={m.label}
-                onClick={props.closePopoverMenu}>
+                onClick={props.setHoverIndex}>
                 <Link href={m.path}>
                   <a className="styled-link">
                     <i className={`icon-${m.icon} submenu`} css={css`display: inline-block; position: relative; left: -8px; font-size: 20px;`} >{m.icon}</i>
@@ -131,36 +167,22 @@ const Submenu = ({menuItem, ...props}) => {
 
 class NavMenu extends React.Component {
   state = {
-    popoverOpen: false,
+    hoverIndex: null,
   }
 
-  openPopoverMenu = event => {
-    event.preventDefault();
-    this.setState({popoverOpen: true});
-  }
-
-  closePopoverMenu = () => {
-    if (!this.props.isDrawerOpen) this.setState({popoverOpen: false});
-  }
-
-  componentDidUpdate = (prevProps) => {
-    if (!this.props.isDrawerOpen && prevProps.isDrawerOpen) {
-      this.setState({popoverOpen: true}); // eslint-disable-line react/no-string-refs
-    } else if (this.props.isDrawerOpen !== prevProps.isDrawerOpen && prevProps.isDrawerOpen) {
-      this.setState({popoverOpen: false});
-    }
+  setHoverIndex = index => {
+    this.setState({hoverIndex: index});
   }
 
   render() {
     return (
-      <nav className="navbar">
+      <nav className="navbar" onMouseLeave={() => this.setHoverIndex(null)}>
         <NavList position={this.props.position}
           isMobile={this.props.isMobile}>
           <NavItems {...this.props}
             {...this.state}
+            setHoverIndex={this.setHoverIndex}
             menuItems={NavEntries}
-            openPopoverMenu={this.openPopoverMenu}
-            closePopoverMenu={this.closePopoverMenu}
           />
         </NavList>
       </nav>

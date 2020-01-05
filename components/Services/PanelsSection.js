@@ -50,8 +50,8 @@ const ServicesPanels = styled.div`
 
 class PanelsSection extends React.Component {
   state = {
-    panels: appState.servicesPanels,
-    routes: appState.servicesPanels.map(p => p.routeName)
+    panels: appState.services,
+    routes: appState.services.map(p => p.routeName)
   }
 
   panelClick = (event, i) => {
