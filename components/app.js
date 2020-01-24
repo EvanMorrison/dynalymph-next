@@ -34,12 +34,14 @@ class App extends Component {
         <div>
         <Head>
           <title>Dynamic Lymphatics</title>
-          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112343025-1"></script>
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112343025-2"></script>
           <script dangerouslySetInnerHTML={{__html:
-              `window.dataLayer = window.dataLayer || [];
-              function gtag(){ dataLayer.push(arguments); }
-              gtag('js', new Date());
-              gtag('config', 'UA-112343025-1');`}}/>
+              `<!-- Global site tag (gtag.js) - Google Analytics -->
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', 'UA-112343025-2');
+                `}}/>
           <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
           <meta httpEquiv="X-UA-Compatible" content="ie=edge"/>
           <meta name="theme-color" content="#000000"/>
