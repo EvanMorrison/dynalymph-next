@@ -152,7 +152,7 @@ export const StyledList = styled.ul`
 
   li {
     display: inline-block;
-    margin-right: 5px;
+    margin: 8px 5px 8px 0;
     font-size: 18px;
     color: ${props => props.theme.logoGreen};
 
