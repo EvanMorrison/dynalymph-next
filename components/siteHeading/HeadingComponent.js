@@ -57,6 +57,19 @@ const Tagline = styled.h3`
 class HeadingComponent extends React.Component {
   render() {
     return (
+      <>
+      <div css={{
+        position: 'absolute',
+        top: 0,
+        width: '100%',
+        zIndex: 100,
+        textAlign: 'center',
+        color: '#f00',
+        padding: 12,
+        fontSize: '1.2em',
+      }}>
+        CLOSED DUE TO COVID-19 <br/> <span css={{ fontSize: '.8em'}}>see below for updates</span>
+      </div>
       <StyledWrapper>
         <Column>
           <Brand position={this.props.position}>
@@ -65,6 +78,7 @@ class HeadingComponent extends React.Component {
           </Brand>
         </Column>
       </StyledWrapper>
+      </>
     );
   }
 }
