@@ -13,7 +13,7 @@ const Navbutton = styled(Row)`
   align-items: center;
 
   .icon-menu {
-    color: ${props => props.position === 1 ? props.theme.contrastText : props.theme.primary};
+    color: ${props => (props.position === 1 ? props.theme.contrastText : props.theme.primary)};
 
     &:hover {
       cursor: pointer;
@@ -36,37 +36,32 @@ const Logo = styled.div`
 `;
 
 class MobileNavComponent extends Component {
-  state = { isDrawerOpen: false }
+  state = { isDrawerOpen: false };
 
   closeDrawer = event => {
-    this.setState({isDrawerOpen: false});
-  }
+    this.setState({ isDrawerOpen: false });
+  };
 
   openDrawer = event => {
-    this.setState({isDrawerOpen: true});
-  }
+    this.setState({ isDrawerOpen: true });
+  };
 
   render() {
     return (
       <Navbutton position={this.props.position}>
-        <i className="icon-menu"
-          css={{color: 'inherit'}}
-          onClick={this.openDrawer}>
+        <i className='icon-menu' css={{ color: 'inherit' }} onClick={this.openDrawer}>
           menu
         </i>
 
         <Drawer open={this.state.isDrawerOpen} closeDrawer={this.closeDrawer}>
           <DrawerHeader>
             <Logo>
-              <h1 css={theme => ({fontFamily: theme.titleFont, color: theme.contrastText})}>
+              <h1 css={theme => ({ fontFamily: theme.titleFont, color: theme.contrastText })}>
                 <em>Dynamic Lymphatics</em>
               </h1>
             </Logo>
           </DrawerHeader>
-          <NavMenu position={0}
-            isDrawerOpen={this.state.isDrawerOpen}
-            isMobile={true}
-            handleClick={this.closeDrawer}/>
+          <NavMenu position={0} isDrawerOpen={this.state.isDrawerOpen} isMobile={true} handleClick={this.closeDrawer} />
         </Drawer>
       </Navbutton>
     );
@@ -74,7 +69,7 @@ class MobileNavComponent extends Component {
 }
 
 MobileNavComponent.propTypes = {
-  position: PropTypes.number
+  position: PropTypes.number,
 };
 
 export default MobileNavComponent;

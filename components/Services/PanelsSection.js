@@ -4,7 +4,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import Router from 'next/router';
 import { rgba } from 'polished';
-import {theme} from '../AppStyles'
+import { theme } from '../AppStyles';
 
 const ServicesPanels = styled.div`
   position: relative;
@@ -51,12 +51,12 @@ const ServicesPanels = styled.div`
 class PanelsSection extends React.Component {
   state = {
     panels: appState.services,
-    routes: appState.services.map(p => p.routeName)
-  }
+    routes: appState.services.map(p => p.routeName),
+  };
 
   panelClick = (event, i) => {
     Router.push(`/services/${this.state.routes[i]}`);
-  }
+  };
 
   render() {
     const panels = this.state.panels;
@@ -64,11 +64,11 @@ class PanelsSection extends React.Component {
     return (
       <ServicesPanels>
         {panels.map((p, i) => {
-          return (<PanelComponent key={i} props={p} color={colors[0]} onClick={(e) => this.panelClick(e, i)}/>);
+          return <PanelComponent key={i} props={p} color={colors[0]} onClick={e => this.panelClick(e, i)} />;
         })}
       </ServicesPanels>
     );
   }
-};
+}
 
 export default PanelsSection;

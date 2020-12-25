@@ -45,8 +45,8 @@ export default [
         path: '/services/breastimplantillness',
         icon: 'keyboard_arrow_right',
         children: null,
-      }
-    ]
+      },
+    ],
   },
   {
     label: 'About',
@@ -64,8 +64,8 @@ export default [
         path: '/about/lymphaticSystem',
         icon: 'keyboard_arrow_right',
         children: null,
-      }
-    ]
+      },
+    ],
   },
   {
     label: 'Appointments',
@@ -78,5 +78,5 @@ export default [
     path: '/location',
     icon: 'pin_drop',
     children: null,
-  }
+  },
 ];

@@ -6,7 +6,7 @@ export default styled.div`
   }
 
   .map-group .place-card {
-    color: #5B5B5B;
+    color: #5b5b5b;
     font-size: 12px;
     cursor: default;
   }
@@ -43,12 +43,12 @@ export default styled.div`
   }
 
   .map-group .navigate .navigate-link:visited {
-    color: #3A84DF;
+    color: #3a84df;
   }
 
   .map-group .navigate .navigate-link .icon {
     font-size: 28px;
-    color: #3A84DF;
+    color: #3a84df;
   }
 
   .map-group .navigate .navigate-text {
@@ -66,7 +66,8 @@ export default styled.div`
     z-index: 1;
   }
 
-  .map-group .navigate .tooltip-anchor .tooltip-tip-inner, .map-group .navigate .tooltip-anchor .tooltip-tip-outer {
+  .map-group .navigate .tooltip-anchor .tooltip-tip-inner,
+  .map-group .navigate .tooltip-anchor .tooltip-tip-outer {
     width: 0;
     height: 0;
     border-left: 8px solid transparent;
@@ -83,7 +84,7 @@ export default styled.div`
   }
 
   .map-group .navigate .tooltip-anchor .tooltip-tip-outer {
-    border-bottom: 8px solid #CBCBCB;
+    border-bottom: 8px solid #cbcbcb;
   }
 
   .map-group .navigate .tooltip-anchor .tooltip-content {
@@ -109,7 +110,7 @@ export default styled.div`
   }
 
   .map-group .bottom-actions a:visited {
-    color: #3A84DF;
+    color: #3a84df;
     text-decoration: none;
   }
 `;

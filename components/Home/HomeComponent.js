@@ -21,7 +21,7 @@ const HomeSection = styled.div`
     height: 100%;
     width: 100%;
     z-index: -1;
-    background-image: url(/assets/water-1444951_1280.jpg), linear-gradient(${rgba("#078", 0.6)}, ${rgba("#078", 0.6)}) ;
+    background-image: url(/assets/water-1444951_1280.jpg), linear-gradient(${rgba('#078', 0.6)}, ${rgba('#078', 0.6)});
     background-repeat: no-repeat;
     background-position: center center;
 
@@ -40,7 +40,7 @@ const HomeSection = styled.div`
 const Mask = styled.div`
   position: absolute;
   bottom: 0px;
-  background: #FFFFFF;
+  background: #ffffff;
   height: 100px;
   width: 100%;
   border-top: 12px solid ${props => props.theme.logoGreen};
@@ -83,16 +83,16 @@ const subheadBlockTwo = css`
 class HomeComponent extends React.Component {
   state = {
     entering: false,
-  }
+  };
 
   componentDidMount = () => {
     setTimeout(() => {
-      this.setState({entering: true});
+      this.setState({ entering: true });
     });
-  }
+  };
 
   render() {
-    const {entering} = this.state;
+    const { entering } = this.state;
     const enteredStyle = css`
       transform: translate(0, 0) scale(1);
       opacity: 1;
@@ -100,7 +100,7 @@ class HomeComponent extends React.Component {
     const h2Style = css`
       text-align: center;
       font-weight: 300;
-      color: #FFFFFF;
+      color: #ffffff;
 
       @media screen and (max-width: 500px) {
         font-size: 12px;
@@ -108,28 +108,56 @@ class HomeComponent extends React.Component {
       }
     `;
     return (
-      <div css={{position: "relative", height: "calc(100vh - 50px)", minHeight: 420}}>
-        <Mask/>
+      <div css={{ position: 'relative', height: 'calc(100vh - 50px)', minHeight: 420 }}>
+        <Mask />
         <HomeSection>
-          <div css={[subheadBlock, entering && enteredStyle, css`
-            top: 15vh;
-          `]}>
-            <h2 css={h2Style}>The Lymphatic system maintains<br/> the dynamic balance of fluid in your body</h2>
+          <div
+            css={[
+              subheadBlock,
+              entering && enteredStyle,
+              css`
+                top: 15vh;
+              `,
+            ]}
+          >
+            <h2 css={h2Style}>
+              The Lymphatic system maintains
+              <br /> the dynamic balance of fluid in your body
+            </h2>
           </div>
-          <div css={[subheadBlockTwo, entering && enteredStyle, css`
-            top: 35vh;
-          `]}>
-            <h2 css={h2Style}>The flow of lymphatic fluid is essential<br/>to body detoxification and immunity</h2>
+          <div
+            css={[
+              subheadBlockTwo,
+              entering && enteredStyle,
+              css`
+                top: 35vh;
+              `,
+            ]}
+          >
+            <h2 css={h2Style}>
+              The flow of lymphatic fluid is essential
+              <br />
+              to body detoxification and immunity
+            </h2>
           </div>
-          <div css={[subheadBlock, entering && enteredStyle, css`
-            top: 55vh;
-          `]}>
-            <h2 css={h2Style}>Manual Lymphatic Drainage is a hands-on therapy<br/> for stimulation and support of these vital processes</h2>
+          <div
+            css={[
+              subheadBlock,
+              entering && enteredStyle,
+              css`
+                top: 55vh;
+              `,
+            ]}
+          >
+            <h2 css={h2Style}>
+              Manual Lymphatic Drainage is a hands-on therapy
+              <br /> for stimulation and support of these vital processes
+            </h2>
           </div>
         </HomeSection>
       </div>
     );
   }
-};
+}
 
 export default HomeComponent;

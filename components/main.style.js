@@ -31,7 +31,7 @@ export default theme => css`
     color: inherit;
   }
 
-  div a.styled-link:not([href^="mailto"]) {
+  div a.styled-link:not([href^='mailto']) {
     text-decoration: none;
     color: inherit;
   }
@@ -44,14 +44,17 @@ export default theme => css`
     font-family: 'Material Icons';
     font-style: normal;
     font-weight: 400;
-    src: local('Material Icons'),
-    local('MaterialIcons-Regular'),
-    url(https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/fonts/Material-Design-Iconic-Font.woff2) format('woff2'),
-    url(https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/fonts/Material-Design-Iconic-Font.woff) format('woff'),
-    url(https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/fonts/Material-Design-Iconic-Font.ttf) format('truetype');
+    src: local('Material Icons'), local('MaterialIcons-Regular'),
+      url(https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/fonts/Material-Design-Iconic-Font.woff2)
+        format('woff2'),
+      url(https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/fonts/Material-Design-Iconic-Font.woff)
+        format('woff'),
+      url(https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/fonts/Material-Design-Iconic-Font.ttf)
+        format('truetype');
   }
 
-  [class^="icon-"], [class*=" icon-"] {
+  [class^='icon-'],
+  [class*=' icon-'] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'Material Icons' !important;
     font-style: normal;
@@ -61,7 +64,7 @@ export default theme => css`
     line-height: 1;
     font-size: 24px;
     color: ${rgba('#000000', 0.87)};
-    
+
     /* Enable Ligatures ================ */
     letter-spacing: 0;
     -webkit-font-feature-settings: 'liga';

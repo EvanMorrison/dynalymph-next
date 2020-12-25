@@ -62,7 +62,8 @@ const PanelHeading = styled.h2`
   padding-left: 30px;
   color: #000;
   /* text-shadow: 1px 1px #222244; */
-  /* background-image: linear-gradient(to bottom, ${props => rgba(props.theme.primary, 0.4)}, ${props => rgba(props.theme.primary, 0.4)} 10%, ${props => rgba(props.theme.primary, 0.5)} 90%); */
+  /* background-image: linear-gradient(to bottom, ${props => rgba(props.theme.primary, 0.4)}, ${props =>
+    rgba(props.theme.primary, 0.4)} 10%, ${props => rgba(props.theme.primary, 0.5)} 90%); */
 `;
 
 const PanelImg = styled.img`
@@ -94,9 +95,9 @@ const PanelText = styled.p`
   line-height: 1.5em;
 `;
 
-const PanelComponent = ({props, color, onClick}) => (
+const PanelComponent = ({ props, color, onClick }) => (
   <Panel onClick={onClick}>
-    <PanelImg src={props.image} alt={`${props.title} image`}/>
+    <PanelImg src={props.image} alt={`${props.title} image`} />
     <Subpanel>
       <PanelHeading color={color}>
         <em>{props.title}</em>

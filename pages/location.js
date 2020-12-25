@@ -1,14 +1,14 @@
-import React from 'react'
-import LocationComponent from '../components/Location'
-import Head from 'next/head'
+import React from 'react';
+import LocationComponent from '../components/Location';
+import Head from 'next/head';
 
 const Location = props => (
   <>
-  <Head>
-    <title>Location | Dynamic Lymphatics</title>
-  </Head>
-  <LocationComponent/>
+    <Head>
+      <title>Location | Dynamic Lymphatics</title>
+    </Head>
+    <LocationComponent />
   </>
-)
+);
 
-export default Location
+export default Location;

@@ -8,18 +8,14 @@ const ItemStyle = styled('li')`
 
 class MenuItem extends Component {
   render() {
-    return (
-      <ItemStyle {...this.props}>
-        {this.props.children}
-      </ItemStyle>
-    );
+    return <ItemStyle {...this.props}>{this.props.children}</ItemStyle>;
   }
 }
 
 MenuItem.propTypes = {
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.object]),
   leftIcon: PropTypes.object,
-  primaryText: PropTypes.string
+  primaryText: PropTypes.string,
 };
 
 export default MenuItem;

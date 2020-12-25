@@ -13,7 +13,7 @@ export const theme = {
   titleFont: 'Bilbo Swash Caps',
   headingFont: 'Arimo',
   bodyFont: 'Arimo',
-  menuFont: 'Arimo'
+  menuFont: 'Arimo',
 };
 
 export const Row = styled.div`
@@ -82,7 +82,7 @@ export const Divider = styled.hr`
 export const SectionTitle = props => (
   <SectionTitleStyle>
     {props.title}
-    <Divider/>
+    <Divider />
   </SectionTitleStyle>
 );
 
@@ -112,37 +112,33 @@ export const Paragraph = styled.div`
   }
 `;
 
-  const SectionImage = props => {
-    const imgStyle = css`
-      position: absolute;
-      height: '100%';
-      top: 0;
-      opacity: 0.7;
-      z-index: -1;
+const SectionImage = props => {
+  const imgStyle = css`
+    position: absolute;
+    height: '100%';
+    top: 0;
+    opacity: 0.7;
+    z-index: -1;
 
-      @media (min-width: 900px) {
-        right: 0;
-      }
+    @media (min-width: 900px) {
+      right: 0;
+    }
 
-      @media (max-weight: 899px) {
-        left: 15%;
-      }
-    `;
-    return(
-      <img src={props.image} css={imgStyle}/>
-    )
-  };
+    @media (max-weight: 899px) {
+      left: 15%;
+    }
+  `;
+  return <img src={props.image} css={imgStyle} />;
+};
 
 export const Section = props => (
   <SectionStyle topcolor='logoGreen'>
     {props.nav}
-    <SectionTitle image={props.image} title={props.title}/>
+    <SectionTitle image={props.image} title={props.title} />
     <SectionBody>
-      <Paragraph>
-        {props.content}
-      </Paragraph>
+      <Paragraph>{props.content}</Paragraph>
     </SectionBody>
-    <SectionImage image={props.image}/>
+    <SectionImage image={props.image} />
   </SectionStyle>
 );
 
