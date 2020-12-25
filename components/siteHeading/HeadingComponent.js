@@ -101,7 +101,7 @@ const HeadingComponent = props => {
         }}
         onClick={handleClickCovidNotice}
       >
-        CLOSED DUE TO COVID-19
+        CLOSED DUE TO COVID-19 <span css={{ fontSize: '0.8em' }}>(click for info)</span>
       </div>
       <StyledWrapper>
         <Column>
