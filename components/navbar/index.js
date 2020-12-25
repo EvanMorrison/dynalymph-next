@@ -16,12 +16,14 @@ const CustomNavbar = styled(Row)`
   top: 0;
   width: 100%;
   z-index: 10;
-  background-color: ${props => rgba(props.theme.primary, (props.position >= 1 ? 0.7 : 0))} !important;
-  ${''/* background-image: linear-gradient(to bottom,
+  background-color: ${props => rgba(props.theme.primary, props.position >= 1 ? 0.7 : 0)} !important;
+  ${
+    '' /* background-image: linear-gradient(to bottom,
                     ${props => rgba(props.theme.primary,.2)},
                     ${props => rgba(props.theme.primary,.4)} 30%,
-                    ${props => rgba(props.theme.primary,.6)} 90%); */}
-  box-shadow: 0 2px 4px ${props => rgba('#335533', (props.position === 1 ? 1 : 0))};
+                    ${props => rgba(props.theme.primary,.6)} 90%); */
+  }
+  box-shadow: 0 2px 4px ${props => rgba('#335533', props.position === 1 ? 1 : 0)};
   height: 100px !important;
   transition: all 0.2s linear;
 `;
@@ -42,7 +44,7 @@ const BrandGroup = styled(Row)`
 
   position: relative;
   top: 0;
-  opacity: ${props => props.position === 1 ? 1 : 0};
+  opacity: ${props => (props.position === 1 ? 1 : 0)};
 `;
 
 const NavTitle = styled.h1`
@@ -80,19 +82,15 @@ class Navbar extends React.Component {
         <NavbarContentContainer>
           <BrandGroup position={this.props.position}>
             <Column>
-              <NavTitle >
-                Dynamic Lymphatics
-              </NavTitle>
-              <NavSubtitle>
-              Lymphatic Drainage Therapy
-              </NavSubtitle>
+              <NavTitle>Dynamic Lymphatics</NavTitle>
+              <NavSubtitle>Lymphatic Drainage Therapy</NavSubtitle>
             </Column>
           </BrandGroup>
           <Row>
             <Column>
               <NavContact>Call: 310-283-9382</NavContact>
-              <DesktopNavComponent position={this.props.position}/>
-              <MobileNavComponent position={this.props.position}/>
+              <DesktopNavComponent position={this.props.position} />
+              <MobileNavComponent position={this.props.position} />
             </Column>
           </Row>
         </NavbarContentContainer>
@@ -102,7 +100,7 @@ class Navbar extends React.Component {
 }
 
 Navbar.propTypes = {
-  position: PropTypes.number
+  position: PropTypes.number,
 };
 
 export default Navbar;

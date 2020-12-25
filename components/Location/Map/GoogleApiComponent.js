@@ -1,19 +1,19 @@
 import React from 'react';
 
-const withGoogleApi = ({apiKey}) => (WrappedComponent) => {
+const withGoogleApi = ({ apiKey }) => WrappedComponent => {
   const mapurl = 'https://maps.googleapis.com/maps/api/js?key=' + apiKey;
 
   class GoogleApiComponent extends React.Component {
     state = {
       loaded: false,
-      google: null
-    }
+      google: null,
+    };
 
     componentDidMount = () => {
       if (window.google) {
         this.setState({
           loaded: true,
-          google: window.google
+          google: window.google,
         });
       } else {
         let apiScript = document.querySelector('script[src="' + mapurl + '"]');
@@ -31,12 +31,10 @@ const withGoogleApi = ({apiKey}) => (WrappedComponent) => {
           });
         };
       }
-    }
+    };
 
     render() {
-      return (
-        <WrappedComponent {...this.state} />
-      );
+      return <WrappedComponent {...this.state} />;
     }
   }
 

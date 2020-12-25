@@ -2,6 +2,8 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { PropTypes } from 'prop-types';
 import { Column } from '../AppStyles';
+import { keyframes } from '@emotion/core';
+import { useRouter } from 'next/router';
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -13,7 +15,7 @@ const StyledWrapper = styled.div`
 
 const Brand = styled.div`
   position: fixed;
-  opacity: ${props => (props.position === 1) ? 0 : 1};
+  opacity: ${props => (props.position === 1 ? 0 : 1)};
   min-width: 7em;
   margin-left: 110px;
   z-index: -1;
@@ -21,16 +23,13 @@ const Brand = styled.div`
 
   @media (min-width: 550px) {
     transform-origin: -100px top;
-    transform:
-      scale(${props => 1 - props.position > 0.75 ? 1 - props.position : 0.75})
-      translateY(${props => -23 * (props.position)}px)
-      translateX(${props => -30 * (props.position)}px);
+    transform: scale(${props => (1 - props.position > 0.75 ? 1 - props.position : 0.75)})
+      translateY(${props => -23 * props.position}px) translateX(${props => -30 * props.position}px);
   }
 
   @media (max-width: 549px) {
-    transform:
-      scale(${props => 1 - props.position > 0.85 ? 1 - props.position : 0.85})
-      translateY(${props => -40 * (props.position)}px);
+    transform: scale(${props => (1 - props.position > 0.85 ? 1 - props.position : 0.85)})
+      translateY(${props => -40 * props.position}px);
     margin-left: 2%;
     font-size: 70%;
 
@@ -54,37 +53,70 @@ const Tagline = styled.h3`
   padding-left: 0.7em;
 `;
 
-class HeadingComponent extends React.Component {
-  render() {
-    return (
-      <>
-      <div css={{
-        position: 'absolute',
-        top: 0,
-        width: '100%',
-        zIndex: 100,
-        textAlign: 'center',
-        color: '#f00',
-        padding: 12,
-        fontSize: '1.2em',
-      }}>
-        CLOSED DUE TO COVID-19 <br/> <span css={{ fontSize: '.8em'}}>see below for updates</span>
+const covidAnimation = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
+const HeadingComponent = props => {
+  const router = useRouter();
+
+  const handleClickCovidNotice = () => {
+    const notice = document.getElementById('covid');
+    if (notice) {
+      setTimeout(() => {
+        notice.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center',
+        });
+      });
+    } else {
+      router.push('/');
+      setTimeout(() => {
+        handleClickCovidNotice();
+      });
+    }
+  };
+
+  return (
+    <>
+      <div
+        css={{
+          cursor: 'pointer',
+          opacity: 0,
+          animation: `${covidAnimation} 2s ease 2s forwards`,
+          position: 'absolute',
+          top: 0,
+          width: '100%',
+          zIndex: 100,
+          textAlign: 'center',
+          color: '#fff',
+          background: '#f00',
+          padding: 8,
+          fontSize: '0.9em',
+        }}
+        onClick={handleClickCovidNotice}
+      >
+        CLOSED DUE TO COVID-19 <span css={{ fontSize: '0.8em' }}>(click for info)</span>
       </div>
       <StyledWrapper>
         <Column>
-          <Brand position={this.props.position}>
+          <Brand position={props.position}>
             <BrandName>Dynamic Lymphatics</BrandName>
             <Tagline>Lymphatic Drainage Therapy</Tagline>
           </Brand>
         </Column>
       </StyledWrapper>
-      </>
-    );
-  }
-}
+    </>
+  );
+};
 
 HeadingComponent.propTypes = {
-  position: PropTypes.number
+  position: PropTypes.number,
 };
 
 export default HeadingComponent;

@@ -1,6 +1,6 @@
-import React from 'react'
-import App from 'next/app'
-import Layout from '../components/app'
+import React from 'react';
+import App from 'next/app';
+import Layout from '../components/app';
 
 class MyApp extends App {
   // Only uncomment this method if you have blocking data requirements for
@@ -16,13 +16,13 @@ class MyApp extends App {
   // }
 
   render() {
-    const { Component, pageProps } = this.props
-    return(
+    const { Component, pageProps } = this.props;
+    return (
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    )
+    );
   }
 }
 
-export default MyApp
+export default MyApp;

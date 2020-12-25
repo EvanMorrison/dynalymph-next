@@ -14,7 +14,7 @@ class MapContainer extends React.Component {
     const mapRef = this.mapNode;
     const geocoder = new google.maps.Geocoder();
     if (address) {
-      geocoder.geocode({address}, (results, status) => {
+      geocoder.geocode({ address }, (results, status) => {
         let computedCenter;
         if (status === 'OK') computedCenter = results[0].geometry.location;
         initMap(computedCenter);
@@ -30,42 +30,51 @@ class MapContainer extends React.Component {
         mapTypeControl: true,
         mapTypeControlOptions: {
           style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
-          position: google.maps.ControlPosition.TOP_RIGHT
-        }
+          position: google.maps.ControlPosition.TOP_RIGHT,
+        },
       });
       const marker = new google.maps.Marker({
         position: mapCenter,
-        map: map
+        map: map,
       });
       const infoWindow = new google.maps.InfoWindow({
-        content: infoWindowContent
+        content: infoWindowContent,
       });
       // info window starts open
       infoWindow.open(map, marker);
       // reopen info window (if closed) on clicking the marker
-      marker.addListener('click', function() {
+      marker.addListener('click', function () {
         infoWindow.open(map, marker);
       });
       this.setState({
         map,
         marker,
-        infoWindow
+        infoWindow,
       });
     };
-  }
+  };
 
-  componentDidUpdate = (prevProps) => {
+  componentDidUpdate = prevProps => {
     if (!prevProps.google && this.props.google) {
       this.loadMap();
     }
-  }
+  };
 
   render() {
     return (
       <Style>
-        <div className='map-group' css={css`height: 400px; width: 95%; max-width: 600px; margin: 0 auto;`}
-          ref={el => { this.mapNode = el; }}>
-        </div>
+        <div
+          className='map-group'
+          css={css`
+            height: 400px;
+            width: 95%;
+            max-width: 600px;
+            margin: 0 auto;
+          `}
+          ref={el => {
+            this.mapNode = el;
+          }}
+        ></div>
       </Style>
     );
   }
@@ -75,7 +84,7 @@ MapContainer.defaultProps = {
   zoom: 13,
   // address: '9458 East Ironwood Square Drive, #102, Scottsdale, AZ 85258',
   address: '9815 East Bell Road, Suite 110, Scottsdale, AZ 85260',
-  center: null
+  center: null,
 };
 
 MapContainer.propTypes = {
@@ -83,10 +92,9 @@ MapContainer.propTypes = {
   loaded: PropTypes.bool,
   zoom: PropTypes.number,
   address: PropTypes.string,
-  center: PropTypes.object
+  center: PropTypes.object,
 };
 
 export default withGoogleApi({
   apiKey: 'AIzaSyBYRJBr8_LNRSUzZUYSbxezDkMzA5d3qN8',
-
 })(MapContainer);

@@ -12,7 +12,7 @@ const Form = styled.form`
   max-width: 38em;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 5px;
- 
+
   .titlebar {
     width: 100%;
     height: 60px;
@@ -47,22 +47,39 @@ class EmailForm extends Component {
   render() {
     return (
       <Form onSubmit={this.props.onSubmit}>
-        <div className="titlebar">
-          Send a message here:
-        </div>
-        <Input type="text" name="name" label="name" outlined
+        <div className='titlebar'>Send a message here:</div>
+        <Input
+          type='text'
+          name='name'
+          label='name'
+          outlined
           value={this.props.message.name}
-          onChange={this.props.handleInput}/>
-        <Input type="text" name="phone" label="phone" outlined
+          onChange={this.props.handleInput}
+        />
+        <Input
+          type='text'
+          name='phone'
+          label='phone'
+          outlined
           value={this.props.message.phone}
-          onChange={this.props.handleInput}/>
-        <Input type="email" name="email" label="email" outlined
+          onChange={this.props.handleInput}
+        />
+        <Input
+          type='email'
+          name='email'
+          label='email'
+          outlined
           value={this.props.message.email}
           onChange={this.props.handleInput}
-          required={true}/>
-        <Input name="message" label="message" outlined
+          required={true}
+        />
+        <Input
+          name='message'
+          label='message'
+          outlined
           value={this.props.message.message}
-          onChange={this.props.handleInput}/>
+          onChange={this.props.handleInput}
+        />
         <StyledButton raised disabled={this.props.sending}>
           Send
         </StyledButton>
@@ -75,7 +92,7 @@ EmailForm.propTypes = {
   onSubmit: PropTypes.func,
   message: PropTypes.object,
   handleInput: PropTypes.func,
-  sending: PropTypes.bool
+  sending: PropTypes.bool,
 };
 
 export default EmailForm;

@@ -19,14 +19,14 @@ class DesktopNavComponent extends Component {
   render() {
     return (
       <DesktopNavWrapper position={this.props.position}>
-        <NavMenu position={this.props.position}/>
+        <NavMenu position={this.props.position} />
       </DesktopNavWrapper>
     );
   }
 }
 
 DesktopNavComponent.propTypes = {
-  position: PropTypes.number
+  position: PropTypes.number,
 };
 
 export default DesktopNavComponent;
