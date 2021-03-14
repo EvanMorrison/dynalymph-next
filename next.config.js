@@ -1,18 +1,21 @@
-var withMDX = require('@next/mdx')({
-  extention: /\.mdx?$/
-})
+const withMDX = require('@next/mdx')({
+  extention: /\.mdx?$/,
+});
 
 module.exports = withMDX({
-    webpack: (config, options) => {
-      config.module.rules.push({
+  webpack: (config, options) => {
+    config.module.rules.push(
+      {
         test: /\.(ico|svg|png|gif|jpe?g)$/,
         exclude: /node_modules/,
-        use: [{
-          loader: "file-loader",
-          options: {
-            name: "[path][name].[ext]"
-          }
-        }]
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][name].[ext]',
+            },
+          },
+        ],
       },
       {
         type: 'javascript/auto',
@@ -21,12 +24,14 @@ module.exports = withMDX({
       },
       {
         test: /\.md$/,
-        use: [{
-          loader: "raw-loader"
-        }]
-      },)
+        use: [
+          {
+            loader: 'raw-loader',
+          },
+        ],
+      }
+    );
 
-      return config
-    }
-  })
-  
+    return config;
+  },
+});
