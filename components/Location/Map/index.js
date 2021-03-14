@@ -1,7 +1,7 @@
 import infoWindowContent from './infoWindow';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import withGoogleApi from './GoogleApiComponent';
 import Style from './map.style';
 

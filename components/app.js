@@ -5,8 +5,7 @@ import Navbar from './navbar';
 import React, { Component } from 'react';
 import styles from './main.style';
 import { theme } from './AppStyles';
-import { ThemeProvider } from 'emotion-theming';
-import { Global } from '@emotion/core';
+import { Global, ThemeProvider } from '@emotion/react';
 import '../public/fonts/mt4w-icons.svg';
 
 class App extends Component {

@@ -1,11 +1,9 @@
 /* stylelint-disable */
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import { rgba } from 'polished';
 
 const globalStyle = theme => css`
-  @import url('https://fonts.googleapis.com/css?family=Arimo:900,700,500,400,300,100');
-  @import url('https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps');
-  @import url('https://fonts.googleapis.com/css?family=Material+Icons');
+  @import url('https://fonts.googleapis.com/css?family=Material+Icons|Arimo:900,700,500,400,300,100|Bilbo+Swash+Caps');
 
   :root {
     font-family: Arimo, sans-serif;
@@ -38,19 +36,6 @@ const globalStyle = theme => css`
 
   .active {
     border-bottom: 1px solid ${rgba(theme.primary, 0.7)};
-  }
-
-  @font-face {
-    font-family: 'Material Icons';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Material Icons'), local('MaterialIcons-Regular'),
-      url(https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/fonts/Material-Design-Iconic-Font.woff2)
-        format('woff2'),
-      url(https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/fonts/Material-Design-Iconic-Font.woff)
-        format('woff'),
-      url(https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/fonts/Material-Design-Iconic-Font.ttf)
-        format('truetype');
   }
 
   [class^='icon-'],
