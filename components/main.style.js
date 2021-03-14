@@ -2,7 +2,7 @@
 import { css } from '@emotion/core';
 import { rgba } from 'polished';
 
-export default theme => css`
+const globalStyle = theme => css`
   @import url('https://fonts.googleapis.com/css?family=Arimo:900,700,500,400,300,100');
   @import url('https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps');
   @import url('https://fonts.googleapis.com/css?family=Material+Icons');
@@ -80,3 +80,5 @@ export default theme => css`
     -moz-osx-font-smoothing: grayscale;
   }
 `;
+
+export default globalStyle;
