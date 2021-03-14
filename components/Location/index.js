@@ -60,11 +60,13 @@ class LocationComponent extends React.Component {
           </SectionHeading>
           <div
             css={[
-              { height: 80, maxWidth: 600, marginBottom: 20, textAlign: 'center', alignSelf: 'center' },
+              { height: 120, maxWidth: 600, marginBottom: 20, textAlign: 'center', alignSelf: 'center' },
               blurredWhiteBackground,
             ]}
           >
-            We are located in north Scottsdale just off the 101 on Bell Rd.
+            <h2>We Are Moving To Utah!</h2>
+            We are excited to announce we are relocating to Utah and will be serving the Greater Salt Lake Area.
+            <br />
             <br />
             Treatments are by appointment only, please text or call 310-283-9382
           </div>

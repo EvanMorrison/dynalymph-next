@@ -118,6 +118,13 @@ const ContactComponent = () => (
         <Covid />
       </div>
     </div>
+    <div css={{ flex: '0 0 100%', marginBottom: 30 }}>
+      <h3>We are relocating to Utah!</h3>
+      <p>
+        If you live in the greater Salt Lake Valley area and would like to learn more about the treatment we offer,
+        please call 310-283-9382.
+      </p>
+    </div>
     <Portrait src={appdata.trishPortrait} alt='Trish Romano, CLT' />
     <Column>
       <Headline>Founder & Principal Care Provider</Headline>
@@ -145,13 +152,17 @@ const ContactComponent = () => (
               <td>
                 <i className='icon-pin_drop'>pin_drop</i>
               </td>
-              <td css={{ paddingLeft: '12px' }}>9815 East Bell Road, Suite 110</td>
+              <td css={{ paddingLeft: '12px' }}>1713 Country Springs Lane</td>
             </tr>
             <tr>
               <td>
                 <i></i>
               </td>
-              <td css={{ paddingLeft: '12px' }}>Scottsdale, AZ 85260</td>
+              <td css={{ paddingLeft: '12px' }}>
+                Bountiful, UT 84010
+                <br />
+                Treatments by appointment only
+              </td>
             </tr>
           </tbody>
         </table>
