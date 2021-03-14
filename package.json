@@ -18,18 +18,18 @@
     "@rmwc/textfield": "^5.7.2",
     "emotion-theming": "^10.0.27",
     "moment": "^2.24.0",
-    "next": "9.3.2",
+    "next": "^10.0.8",
     "polished": "^3.4.2",
     "prop-types": "^15.7.2",
-    "react": "16.12.0",
-    "react-dom": "16.12.0"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.12.1",
     "@babel/eslint-plugin": "^7.12.1",
     "@emotion/eslint-plugin": "^11.0.0",
-    "@mdx-js/loader": "^1.5.3",
-    "@next/mdx": "^9.1.6",
+    "@mdx-js/loader": "^1.6.22",
+    "@next/mdx": "^10.0.8",
     "eslint": "^7.16.0",
     "eslint-config-prettier": "^7.1.0",
     "eslint-config-standard": "^16.0.2",
