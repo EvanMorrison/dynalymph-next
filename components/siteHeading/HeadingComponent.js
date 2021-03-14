@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { PropTypes } from 'prop-types';
 import { Column } from '../AppStyles';
-import { keyframes } from '@emotion/core';
+import { keyframes } from '@emotion/react';
 import { useRouter } from 'next/router';
 
 const StyledWrapper = styled.div`

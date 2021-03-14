@@ -4,7 +4,7 @@ import MDXContent from '../../content/about.mdx';
 import Subnav from '../../components/About/subnav';
 import appdata from '../../components/appState';
 import { SectionStyle, SectionTitle, SectionBody, Paragraph } from '../../components/AppStyles';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 
 const AboutComponent = () => {
   return (

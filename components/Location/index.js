@@ -1,7 +1,7 @@
 import React from 'react';
 import Map from './Map';
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import { rgba } from 'polished';
 import { Row, Column } from '../AppStyles';
 

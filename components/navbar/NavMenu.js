@@ -4,7 +4,7 @@ import NavEntries from './NavMenuData';
 import Popover from './components/popover';
 import React from 'react';
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import { useRouter } from 'next/router';
 import { PropTypes } from 'prop-types';
 import Link from 'next/link';
