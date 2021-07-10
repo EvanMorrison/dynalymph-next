@@ -1,5 +1,4 @@
 import React from 'react';
-import Covid from './covid.mdx';
 import Welcome from './welcome.mdx';
 import appdata from '../appState';
 import Link from 'next/link';
@@ -101,25 +100,12 @@ const ContactComponent = () => (
   <ContactSection>
     <div css={theme => [{ marginBottom: 50, flex: '0 0 100%' }, mdxStyle(theme)]}>
       <Welcome />
-      <div
-        id='covid'
-        css={{
-          border: '3px solid #f00',
-          borderRadius: 3,
-          padding: 12,
-          h2: {
-            color: '#f00',
-          },
-          p: {
-            margin: '15px !important',
-          },
-        }}
-      >
-        <Covid />
-      </div>
     </div>
-    <div css={{ flex: '0 0 100%', marginBottom: 30 }}>
-      <h3>We are relocating to Utah!</h3>
+    <div
+      id='announcement'
+      css={{ flex: '0 0 100%', marginBottom: 30, border: '3px solid #f00', borderRadius: 3, padding: 12 }}
+    >
+      <h3>We have relocated to Utah!</h3>
       <p>
         If you live in the greater Salt Lake Valley area and would like to learn more about the treatment we offer,
         please call 310-283-9382.
