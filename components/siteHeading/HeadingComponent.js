@@ -66,7 +66,7 @@ const HeadingComponent = props => {
   const router = useRouter();
 
   const handleClickCovidNotice = () => {
-    const notice = document.getElementById('covid');
+    const notice = document.getElementById('announcement');
     if (notice) {
       setTimeout(() => {
         notice.scrollIntoView({
@@ -84,7 +84,7 @@ const HeadingComponent = props => {
 
   return (
     <>
-      <div
+      {/* <div
         css={{
           cursor: 'pointer',
           opacity: 0,
@@ -101,8 +101,8 @@ const HeadingComponent = props => {
         }}
         onClick={handleClickCovidNotice}
       >
-        CURRENTLY CLOSED DURING THE PANDEMIC <span css={{ fontSize: '0.8em' }}>(click for info)</span>
-      </div>
+        WE'VE MOVED! <span css={{ fontSize: '0.8em' }}>(click for info)</span>
+      </div> */}
       <StyledWrapper>
         <Column>
           <Brand position={props.position}>
