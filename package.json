@@ -16,7 +16,7 @@
     "@material/textfield": "^4.0.0",
     "@rmwc/button": "^5.7.2",
     "@rmwc/textfield": "^5.7.2",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "next": "^10.0.8",
     "polished": "^3.4.2",
     "prop-types": "^15.7.2",
