@@ -10,16 +10,16 @@ const Subnav = () => {
     <nav>
       <StyledList>
         <li>
-          <Link href={`/about`}>
-            <a className='styled-link'>About > </a>
+          <Link href={`/about`} className='styled-link'>
+            About &gt;
           </Link>
         </li>
         {appState.about.map((p, i, arr) => {
           const isActive = router.pathname.endsWith(p.routeName);
           return (
             <li key={p.title}>
-              <Link href={`/about/${p.routeName}`}>
-                <a className={`styled-link${isActive ? ' active' : ''}`}>{p.title}</a>
+              <Link href={`/about/${p.routeName}`} className={`styled-link${isActive ? ' active' : ''}`}>
+                {p.title}
               </Link>
               {i < arr.length - 1 && <span> | </span>}
             </li>

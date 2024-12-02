@@ -6,7 +6,7 @@ import React, { Component } from 'react';
 import styles from './main.style';
 import { theme } from './AppStyles';
 import { Global, ThemeProvider } from '@emotion/react';
-import '../public/fonts/mt4w-icons.svg';
+import '../../public/fonts/mt4w-icons.svg';
 
 class App extends Component {
   state = {

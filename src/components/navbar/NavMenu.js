@@ -94,11 +94,14 @@ class NavItem extends React.Component {
     const { activeLink, index, m, ...props } = this.props;
     return (
       <li key={m.label} onMouseEnter={() => props.setHoverIndex(index)} onClick={props.handleClick}>
-        <Link href={m.path} prefetch={false}>
-          <a className='styled-link' css={theme => [activeLink && { background: rgba(theme.primaryLt, 0.5) }]}>
-            <i className={`icon-${m.icon}`}>{m.icon}</i>
-            {m.label}
-          </a>
+        <Link
+          href={m.path}
+          prefetch={false}
+          className='styled-link'
+          css={theme => [activeLink && { background: rgba(theme.primaryLt, 0.5) }]}
+        >
+          <i className={`icon-${m.icon}`}>{m.icon}</i>
+          {m.label}
         </Link>
         {m.children ? (
           props.isMobile ? (
@@ -136,38 +139,35 @@ const Submenu = ({ menuItem, ...props }) => {
       render={popoverState => (
         <Menu onMouseLeave={props.setHoverIndex} onClick={props.handleClick} {...popoverState}>
           <MenuItem onClick={props.setHoverIndex} {...menuItem}>
-            <Link href={menuItem.path}>
-              <a
-                className='styled-link'
-                css={css`
-                  * {
-                    color: #000000;
-                  }
-                `}
-              >
-                <i className={`icon-${menuItem.icon}`}>{menuItem.icon}</i>
-                <span>{menuItem.label}</span>
-              </a>
+            <Link
+              href={menuItem.path}
+              className='styled-link'
+              css={css`
+                * {
+                  color: #000000;
+                }
+              `}
+            >
+              <i className={`icon-${menuItem.icon}`}>{menuItem.icon}</i>
+              <span>{menuItem.label}</span>
             </Link>
           </MenuItem>
           {menuItem.children.map((m, i) => {
             return (
               <MenuItem key={m.label} onClick={props.setHoverIndex}>
-                <Link href={m.path}>
-                  <a className='styled-link'>
-                    <i
-                      className={`icon-${m.icon} submenu`}
-                      css={css`
-                        display: inline-block;
-                        position: relative;
-                        left: -8px;
-                        font-size: 20px;
-                      `}
-                    >
-                      {m.icon}
-                    </i>
-                    <span css={{ color: '#000000' }}>{m.label}</span>
-                  </a>
+                <Link href={m.path} className='styled-link'>
+                  <i
+                    className={`icon-${m.icon} submenu`}
+                    css={css`
+                      display: inline-block;
+                      position: relative;
+                      left: -8px;
+                      font-size: 20px;
+                    `}
+                  >
+                    {m.icon}
+                  </i>
+                  <span css={{ color: '#000000' }}>{m.label}</span>
                 </Link>
               </MenuItem>
             );

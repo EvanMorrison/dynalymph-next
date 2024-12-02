@@ -138,14 +138,14 @@ const ContactComponent = () => (
               <td>
                 <i className='icon-pin_drop'>pin_drop</i>
               </td>
-              <td css={{ paddingLeft: '12px' }}>1713 Country Springs Lane</td>
+              <td css={{ paddingLeft: '12px' }}>224 S Main Street, Suite 205</td>
             </tr>
             <tr>
               <td>
                 <i></i>
               </td>
               <td css={{ paddingLeft: '12px' }}>
-                Bountiful, UT 84010
+                Centerville, UT 84014
                 <br />
                 Treatments by appointment only
               </td>
@@ -156,7 +156,7 @@ const ContactComponent = () => (
     </Column>
     <div css={{ margin: '30px 0 80px', flex: '0 0 100%' }}>
       Learn more about Trish on the{' '}
-      <Link href='/about'>
+      <Link href='/about' legacyBehavior>
         <span css={{ color: '#00E', cursor: 'pointer' }}>
           <a>About</a>
         </span>
