@@ -67,12 +67,12 @@ export default [
       },
     ],
   },
-  {
-    label: 'Appointments',
-    path: '/appointments',
-    icon: 'schedule',
-    children: null,
-  },
+  // {
+  //   label: 'Appointments',
+  //   path: '/appointments',
+  //   icon: 'schedule',
+  //   children: null,
+  // },
   {
     label: 'Location',
     path: '/location',
