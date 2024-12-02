@@ -138,14 +138,14 @@ const ContactComponent = () => (
               <td>
                 <i className='icon-pin_drop'>pin_drop</i>
               </td>
-              <td css={{ paddingLeft: '12px' }}>1713 Country Springs Lane</td>
+              <td css={{ paddingLeft: '12px' }}>224 S Main Street, Suite 205</td>
             </tr>
             <tr>
               <td>
                 <i></i>
               </td>
               <td css={{ paddingLeft: '12px' }}>
-                Bountiful, UT 84010
+                Centerville, UT 84014
                 <br />
                 Treatments by appointment only
               </td>
