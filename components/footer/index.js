@@ -1,4 +1,3 @@
-import moment from 'moment';
 import React from 'react';
 import styled from '@emotion/styled';
 import { rgba } from 'polished';
@@ -31,7 +30,7 @@ const Footer = () => (
     <div>
       <Column>
         <Row>
-          <span>&copy;{moment().format('YYYY')}</span>
+          <span>&copy;{new Date().getFullYear()}</span>
           <span>Dynamic Lymphatics, LLC</span>
         </Row>
       </Column>

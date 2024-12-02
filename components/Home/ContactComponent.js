@@ -156,7 +156,7 @@ const ContactComponent = () => (
     </Column>
     <div css={{ margin: '30px 0 80px', flex: '0 0 100%' }}>
       Learn more about Trish on the{' '}
-      <Link href='/about'>
+      <Link href='/about' legacyBehavior>
         <span css={{ color: '#00E', cursor: 'pointer' }}>
           <a>About</a>
         </span>
