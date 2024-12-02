@@ -24,7 +24,8 @@
   },
   "devDependencies": {
     "@emotion/eslint-plugin": "^11.0.0",
-    "@next/mdx": "15.0.3",
+    "@mdx-js/loader": "^3.1.0",
+    "@next/mdx": "^15.0.3",
     "eslint": "^7.16.0",
     "eslint-config-prettier": "^7.1.0",
     "eslint-config-standard": "^16.0.2",

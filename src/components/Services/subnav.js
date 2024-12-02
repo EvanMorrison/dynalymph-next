@@ -11,7 +11,7 @@ const Subnav = () => {
       <StyledList>
         <li>
           <Link href={`/services`} className='styled-link'>
-            Services > 
+            Services &gt; 
           </Link>
         </li>
         {appState.services.map((p, i, arr) => {
