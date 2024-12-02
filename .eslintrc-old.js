@@ -6,7 +6,8 @@ module.exports = {
     jest: true,
   },
   extends: ['standard', 'prettier/standard', 'plugin:prettier/recommended'],
-  plugins: ['@emotion', 'import', 'react', 'react-hooks'],
+  parser: '@babel/eslint-parser',
+  plugins: ['@babel/eslint-plugin', '@emotion', 'import', 'react', 'react-hooks'],
   rules: {
     'comma-dangle': ['error', 'only-multiline'],
     'default-param-last': 0,

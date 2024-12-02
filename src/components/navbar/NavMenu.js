@@ -93,16 +93,15 @@ class NavItem extends React.Component {
   render() {
     const { activeLink, index, m, ...props } = this.props;
     return (
-      (<li key={m.label} onMouseEnter={() => props.setHoverIndex(index)} onClick={props.handleClick}>
+      <li key={m.label} onMouseEnter={() => props.setHoverIndex(index)} onClick={props.handleClick}>
         <Link
           href={m.path}
           prefetch={false}
           className='styled-link'
-          css={theme => [activeLink && { background: rgba(theme.primaryLt, 0.5) }]}>
-
+          css={theme => [activeLink && { background: rgba(theme.primaryLt, 0.5) }]}
+        >
           <i className={`icon-${m.icon}`}>{m.icon}</i>
           {m.label}
-
         </Link>
         {m.children ? (
           props.isMobile ? (
@@ -118,7 +117,7 @@ class NavItem extends React.Component {
             />
           )
         ) : null}
-      </li>)
+      </li>
     );
   }
 }
@@ -134,7 +133,7 @@ const NavItems = ({ menuItems, ...props }) => {
 
 const Submenu = ({ menuItem, ...props }) => {
   return (
-    (<Popover
+    <Popover
       open={props.popoverOpen}
       itemCount={menuItem.children.length + 1}
       render={popoverState => (
@@ -147,18 +146,16 @@ const Submenu = ({ menuItem, ...props }) => {
                 * {
                   color: #000000;
                 }
-              `}>
-
+              `}
+            >
               <i className={`icon-${menuItem.icon}`}>{menuItem.icon}</i>
               <span>{menuItem.label}</span>
-
             </Link>
           </MenuItem>
           {menuItem.children.map((m, i) => {
             return (
-              (<MenuItem key={m.label} onClick={props.setHoverIndex}>
+              <MenuItem key={m.label} onClick={props.setHoverIndex}>
                 <Link href={m.path} className='styled-link'>
-
                   <i
                     className={`icon-${m.icon} submenu`}
                     css={css`
@@ -171,14 +168,13 @@ const Submenu = ({ menuItem, ...props }) => {
                     {m.icon}
                   </i>
                   <span css={{ color: '#000000' }}>{m.label}</span>
-
                 </Link>
-              </MenuItem>)
+              </MenuItem>
             );
           })}
         </Menu>
       )}
-    />)
+    />
   );
 };
 
